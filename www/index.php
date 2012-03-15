@@ -21,20 +21,8 @@ if ($controller->options['format'] == 'html') {
     switch($controller->options['format']) {
         case 'partial':
             $outputcontroller->setEscape('htmlentities');
-        case 'staticgooglemapsv2':
-            Savvy_ClassToTemplateMapper::$output_template['UNL_OpenMap'] = 'UNL/TourMap/Controller-partial';
-            break;
-        case 'georss':
-            header('Content-Type:application/rss+xml');
-            $outputcontroller->setEscape('htmlspecialchars');
-            break;
         case 'json':
             //header('Content-Type:application/json');
-            break;
-        case 'kml':
-            $outputcontroller->setEscape('htmlspecialchars');
-            header('Content-Type:application/vnd.google-earth.kml+xml');
-            header('Content-Disposition:filename="'.$controller->options['view'].'.kml"');
             break;
         case 'mobile':
             $outputcontroller->setEscape('htmlentities');
