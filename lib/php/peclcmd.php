@@ -19,8 +19,8 @@
 /**
  * @nodep Gtk
  */
-if ('/Users/bbieber/Documents/workspace/UNL_TourMap/lib/php' != '@'.'include_path'.'@') {
-    ini_set('include_path', '/Users/bbieber/Documents/workspace/UNL_TourMap/lib/php');
+if ('/Users/bbieber/Documents/workspace/UNL_OpenMap/lib/php' != '@'.'include_path'.'@') {
+    ini_set('include_path', '/Users/bbieber/Documents/workspace/UNL_OpenMap/lib/php');
     $raw = false;
 } else {
     // this is a raw, uninstalled pear, either a cvs checkout, or php distro

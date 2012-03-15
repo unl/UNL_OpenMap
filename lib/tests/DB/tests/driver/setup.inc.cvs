@@ -54,7 +54,7 @@ if (!defined('PATH_SEPARATOR')) {
  * Therefore, we'll assume the tests should use the version of
  * DB that has come from there as well.
  */
-if ('/Users/bbieber/Documents/workspace/UNL_TourMap/lib/php' != '@'.'include_path'.'@') {
+if ('/Users/bbieber/Documents/workspace/UNL_OpenMap/lib/php' != '@'.'include_path'.'@') {
     ini_set('include_path', ini_get('include_path')
             . PATH_SEPARATOR . '.'
     );

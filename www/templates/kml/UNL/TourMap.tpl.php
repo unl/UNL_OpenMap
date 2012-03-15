@@ -8,7 +8,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
         <Style id="buildingPlacemark">
           <IconStyle>
             <Icon>
-              <href><?php echo UNL_TourMap::getURL(); ?>images/icons/buildings64.png?FOOL_GOOGLE_CACHE_FOR_TESTING=<?php echo time();?></href>
+              <href><?php echo UNL_OpenMap_Controller::getURL(); ?>images/icons/buildings64.png?FOOL_GOOGLE_CACHE_FOR_TESTING=<?php echo time();?></href>
             </Icon>
             <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction" />
           </IconStyle>
@@ -16,7 +16,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
         <Style id="sculpturePlacemark">
           <IconStyle>
             <Icon>
-              <href><?php echo UNL_TourMap::getURL(); ?>images/icons/sculptures64.png?FOOL_GOOGLE_CACHE_FOR_TESTING=<?php echo time();?></href>
+              <href><?php echo UNL_OpenMap_Controller::getURL(); ?>images/icons/sculptures64.png?FOOL_GOOGLE_CACHE_FOR_TESTING=<?php echo time();?></href>
             </Icon>
             <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction" />
           </IconStyle>
@@ -24,7 +24,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
         <Style id="emergencyphonePlacemark">
           <IconStyle>
             <Icon>
-              <href><?php echo UNL_TourMap::getURL(); ?>images/icons/emergencyphones64.png?FOOL_GOOGLE_CACHE_FOR_TESTING=<?php echo time();?></href>
+              <href><?php echo UNL_OpenMap_Controller::getURL(); ?>images/icons/emergencyphones64.png?FOOL_GOOGLE_CACHE_FOR_TESTING=<?php echo time();?></href>
             </Icon>
             <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction" />
           </IconStyle>
@@ -32,7 +32,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
         <Style id="policestationPlacemark">
           <IconStyle>
             <Icon>
-              <href><?php echo UNL_TourMap::getURL(); ?>images/icons/policestations64.png?FOOL_GOOGLE_CACHE_FOR_TESTING=<?php echo time();?></href>
+              <href><?php echo UNL_OpenMap_Controller::getURL(); ?>images/icons/policestations64.png?FOOL_GOOGLE_CACHE_FOR_TESTING=<?php echo time();?></href>
             </Icon>
             <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction" />
           </IconStyle>

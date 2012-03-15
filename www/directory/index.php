@@ -7,10 +7,10 @@ if (file_exists(dirname(__FILE__) . '/../../config.inc.php')) {
 }
 
 // Initialize output settings for this page.
-UNL_Common::$driver = new UNL_TourMap_BuildingDriver();
+UNL_Common::$driver = new UNL_OpenMap_BuildingDriver();
 UNL_Geography_SpatialData_Campus::$driver = new UNL_Geography_SpatialData_PDOSQLiteDriver();
 
-$outputcontroller = new UNL_TourMap_OutputController();
+$outputcontroller = new UNL_OpenMap_OutputController();
 $outputcontroller->setTemplatePath(dirname(dirname(__FILE__)).'/templates/html');
 
 
@@ -42,7 +42,7 @@ $page->maincontentarea .= '
                 <div id="pointlist">
                 <h3 class="sec_header">All Buildings</h3>
 ';
-$page->maincontentarea .= $outputcontroller->render(new UNL_TourMap_MarkerList_Buildings(), 'UNL/TourMap/MarkerList.tpl.php');
+$page->maincontentarea .= $outputcontroller->render(new UNL_OpenMap_MarkerList_Buildings(), 'UNL/TourMap/MarkerList.tpl.php');
 $page->maincontentarea .= '</div>
             </div>';
 if (isset($_GET['mc'])) {

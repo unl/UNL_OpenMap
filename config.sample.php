@@ -19,5 +19,5 @@ error_reporting(E_ALL);
 
 set_include_path(dirname(__FILE__).'/src'.PATH_SEPARATOR.dirname(__FILE__).'/lib/php');
 
-UNL_TourMap::$url = 'http://localhost/workspace/UNL_TourMap/www/';
-UNL_TourMap_Marker_Image::$image_dir = dirname(__FILE__).'/www/images/';
+UNL_OpenMap_Controller::$url = 'http://localhost/workspace/UNL_OpenMap/www/';
+UNL_OpenMap_Marker_Image::$image_dir = dirname(__FILE__).'/www/images/';

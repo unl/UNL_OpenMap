@@ -7,22 +7,22 @@ if (file_exists(dirname(__FILE__) . '/../config.inc.php')) {
 }
 
 // Initialize output settings for this page.
-UNL_Common::$driver = new UNL_TourMap_BuildingDriver();
+UNL_Common::$driver = new UNL_OpenMap_BuildingDriver();
 UNL_Geography_SpatialData_Campus::$driver = new UNL_Geography_SpatialData_PDOSQLiteDriver();
 
-$tour = new UNL_TourMap(UNL_TourMap_Router::getRoute($_SERVER['REQUEST_URI']) + $_GET);
+$controller = new UNL_OpenMap_Controller(UNL_OpenMap_Router::getRoute($_SERVER['REQUEST_URI']) + $_GET);
 
-$outputcontroller = new UNL_TourMap_OutputController();
+$outputcontroller = new UNL_OpenMap_OutputController();
 $outputcontroller->setTemplatePath(dirname(__FILE__).'/templates/html');
 
-if ($tour->options['format'] == 'html') {
+if ($controller->options['format'] == 'html') {
     $outputcontroller->setEscape('htmlentities');
 } else {
-    switch($tour->options['format']) {
+    switch($controller->options['format']) {
         case 'partial':
             $outputcontroller->setEscape('htmlentities');
         case 'staticgooglemapsv2':
-            Savvy_ClassToTemplateMapper::$output_template['UNL_TourMap'] = 'UNL/TourMap-partial';
+            Savvy_ClassToTemplateMapper::$output_template['UNL_OpenMap'] = 'UNL/TourMap/Controller-partial';
             break;
         case 'georss':
             header('Content-Type:application/rss+xml');
@@ -34,7 +34,7 @@ if ($tour->options['format'] == 'html') {
         case 'kml':
             $outputcontroller->setEscape('htmlspecialchars');
             header('Content-Type:application/vnd.google-earth.kml+xml');
-            header('Content-Disposition:filename="'.$tour->options['view'].'.kml"');
+            header('Content-Disposition:filename="'.$controller->options['view'].'.kml"');
             break;
         case 'mobile':
             $outputcontroller->setEscape('htmlentities');
@@ -42,12 +42,12 @@ if ($tour->options['format'] == 'html') {
         default:
     }
     $outputcontroller->sendCORSHeaders();
-    $outputcontroller->addTemplatePath(dirname(__FILE__).'/templates/'.$tour->options['format']);
+    $outputcontroller->addTemplatePath(dirname(__FILE__).'/templates/'.$controller->options['format']);
 }
 
-$outputcontroller->addGlobal('controller', $tour);
+$outputcontroller->addGlobal('controller', $controller);
 
-//$outputcontroller->addFilters(array($tour, 'postRun'));
-echo $outputcontroller->render($tour);
+//$outputcontroller->addFilters(array($controller, 'postRun'));
+echo $outputcontroller->render($controller);
 
 
