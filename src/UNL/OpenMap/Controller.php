@@ -197,11 +197,11 @@ class UNL_OpenMap_Controller
 
     public static function getDataDir()
     {
-        return dirname(dirname(dirname(__FILE__))).'/data';
+        return dirname(dirname(dirname(dirname(__FILE__)))).'/data';
     }
 
     public static function getFileRoot()
     {
-        return dirname(dirname(dirname(__FILE__)));
+        return dirname(dirname(dirname(dirname(__FILE__))));
     }
 }
