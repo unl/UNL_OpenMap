@@ -1,0 +1,257 @@
+/***
+Header
+***/
+* {
+    margin:0;
+    padding:0;
+}
+html{
+    font-size: 100%;
+}
+body {
+    line-height: 1;
+    font-size: 1em;
+    font-family:sans-serif;
+}
+#header {
+    display:none;
+}
+nav {
+    background: #f6f8f9; /* old browsers */
+    background: -moz-linear-gradient(top, #f6f8f9 0%, #f6f8f9 88%, #B2ADAD 99%); /* firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6f8f9), color-stop(88%,#f6f8f9), color-stop(99%,#B2ADAD)); /* webkit */
+    display:block;
+}
+nav ul {
+    display:inline-block;
+    list-style:none;
+    height:auto;
+    border-right:1px solid #dbdbdb;
+    position:relative;
+}
+nav > ul > li {
+    display:inline;
+    float:left;
+    border-right:#fff 1px solid;
+    border-left:1px solid #dbdbdb;
+}
+nav > ul > li:first-child {
+    padding:10px;
+}
+nav > ul > li select {width:130px;}
+nav > ul > li > a {
+    display:block;
+    text-indent:-9999em;
+    width:30px;
+    height:30px;
+    padding:5px;
+}
+.action {
+    background:url('images/actionItems.png') no-repeat 10px -28px;
+}
+#actionLayers a {
+    background-position:10px 10px;
+}
+#selectMarkers {
+    display:none;
+    position:absolute;
+    background:#f1f1f1;
+    z-index:1;
+    top:100%;
+    width:170px;
+    margin-left:-130px;
+    margin-top:5px;
+    border:3px solid #8d8d8d;
+    -webkit-border-radius:5px;
+    box-shadow:1px 1px 5px #626262;
+}
+#selectMarkers:before{
+    display:block;
+    content:'';
+    background:url('images/layersAvailable.png') no-repeat 0 0;
+    width:15px;
+    height:15px;
+    position:absolute;
+    top:-18px;
+    right:20px;
+}
+#selectMarkers li.on {
+    background:#e5e5e5;
+}
+#selectMarkers li.on a:before {
+    content:'\2714';
+    color: #a0c12c;
+    padding-right: .2em;
+    text-shadow: -1px -1px 2px #ffffff;
+}
+#selectMarkers a {
+    padding:10px 10px;
+    display:block;
+    border-bottom:1px solid #c9c9c9;
+    border-top:1px solid #fff;
+    font-size: 0.85em;
+    font-weight:bold;
+    text-decoration:none;
+    color:#626262;
+    text-shadow: -1px -1px 2px #ffffff;
+    cursor:pointer;
+}
+#loading {
+    background:rgba(0,0,0,0.6);
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:42px;
+    left:0;
+    display:none;
+}
+.meter { 
+        margin:200px auto;
+        height: 20px;
+        width:60%;
+        position: relative;
+        background: #555;
+        -moz-border-radius: 25px;
+        -webkit-border-radius: 25px;
+        border-radius: 25px;
+        padding: 10px;
+        -webkit-box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+        -moz-box-shadow   : inset 0 -1px 1px rgba(255,255,255,0.3);
+        box-shadow        : inset 0 -1px 1px rgba(255,255,255,0.3);
+}
+.meter > span {
+        display: block;
+        height: 100%;
+        -webkit-border-radius: 20px;
+        -moz-border-radius:20px;
+        border-radius:20px;
+        background-color: #f0a3a3;
+        background-image: -moz-linear-gradient(top, #f0a3a3, #f42323);
+        background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #f0a3a3),color-stop(1, #f42323));
+        background-image: -webkit-linear-gradient(#f0a3a3, #f42323);
+        -webkit-box-shadow: 
+          inset 0 2px 9px  rgba(255,255,255,0.3),
+          inset 0 -2px 6px rgba(0,0,0,0.4);
+        -moz-box-shadow: 
+          inset 0 2px 9px  rgba(255,255,255,0.3),
+          inset 0 -2px 6px rgba(0,0,0,0.4);
+        box-shadow: 
+          inset 0 2px 9px  rgba(255,255,255,0.3),
+          inset 0 -2px 6px rgba(0,0,0,0.4);
+        position: relative;
+        overflow: hidden;
+}
+.meter > span:after, .animate > span > span {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; bottom: 0; right: 0;
+        background-image:
+          -webkit-gradient(linear, 0 0, 100% 100%,
+            color-stop(.25, rgba(255, 255, 255, .2)),
+            color-stop(.25, transparent), color-stop(.5, transparent),
+            color-stop(.5, rgba(255, 255, 255, .2)),
+            color-stop(.75, rgba(255, 255, 255, .2)),
+            color-stop(.75, transparent), to(transparent)
+          );
+        background-image: 
+          -moz-linear-gradient(
+            -45deg,
+            rgba(255, 255, 255, .2) 25%,
+            transparent 25%, 
+            transparent 50%, 
+            rgba(255, 255, 255, .2) 50%,
+            rgba(255, 255, 255, .2) 75%,
+            transparent 75%, 
+            transparent
+          );
+        z-index: 1;
+        -webkit-background-size: 50px 50px;
+        -moz-background-size: 50px 50px;
+        -webkit-animation: move 2s linear infinite;
+        -webkit-border-radius: 20px;
+        -moz-border-radius:20px;
+        border-radius:20px;
+        overflow: hidden;
+}
+
+.animate > span:after {
+        display: none;
+}
+
+@-webkit-keyframes move {
+    0% {
+       background-position: 0 0;
+    }
+    100% {
+       background-position: 50px 50px;
+    }
+}
+.red > span {
+        
+}
+        
+#infoBox {
+    height:0px;
+    position:fixed;
+    bottom:0px;
+    background: #f6f8f9; /* old browsers */
+    background-image: -moz-linear-gradient(bottom, #f6f8f9 0%, #f6f8f9 8%, #B2ADAD 99%); /* firefox */
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0%,#f6f8f9), color-stop(8%,#f6f8f9), color-stop(99%,#B2ADAD)); /* webkit */ 
+    background-repeat:no-repeat;
+    width:100%;
+    -webkit-transition: all linear 0.5s;
+    background-size:100% 5px;
+    color:#666;
+}
+#infoBox > * {
+    margin:10px;
+}
+#infoBoxContent {
+    background: #f6f8f9;
+    margin: 0;
+    padding: 10px;
+}
+#infoBox h4 {
+    text-shadow: -1px -1px 2px #ffffff;
+    font-size:0.8em;
+    display:inline-block;
+    padding:5px 0;
+}
+#infoBox h4 span {
+    color:#3A8103;
+    font-size:0.6em;
+}
+#infoBox a.more {
+    float:right;
+    border:1px solid #dbdbdb;
+    -webkit-border-radius:3px;
+    boder-radius:3px;
+    padding:5px;
+    -webkit-box-shadow: inset -1px -1px 2px #8a8a8a;
+    -moz-box-shadow: inset -1px -1px 2px #8a8a8a;
+    box-shadow: inset -1px -1px 2px #8a8a8a;
+    background:#f1f1f1;
+    text-decoration:none;
+    color:#666;
+    font-size:0.6em;
+}
+#infoBox .more ~ * {
+    display:none;
+}
+#infoBox .two_col {
+    width:48%;
+    float:left;
+    clear:both;
+}
+#infoBox .col {
+    width:23%;  
+    float:left;
+    margin-left:2%;
+}
+#infoBox p, #infoBox ul {
+    font-size: 0.75em;
+    line-height: 1.25em;
+    margin:0 0 1em 0;
+}
+#infoBox ul {margin-left:2em;}
+#infoBox #fullImage {display:none !important;}

@@ -1,0 +1,1 @@
+<li class="sculpture"><?php echo $context->getRaw('title'); ?></li>

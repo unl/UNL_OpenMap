@@ -1,0 +1,11 @@
+<?php
+class UNL_TourMap_MarkerList_EastCampusBuildings extends UNL_TourMap_MarkerList_Buildings
+{
+    public $title = 'UNL East Campus Buildings';
+    
+    function getBuildingList()
+    {
+        $this->locations = require_once dirname(dirname(dirname(dirname(dirname(__FILE__))))).'/data/locations.inc.php';
+        return $this->locations['East Campus'];
+    }
+}

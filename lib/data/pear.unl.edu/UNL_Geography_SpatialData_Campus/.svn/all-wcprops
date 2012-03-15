@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/unl_tourmap/!svn/ver/513/trunk/lib/data/pear.unl.edu/UNL_Geography_SpatialData_Campus
+END
+spatialdata.sqlite
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/unl_tourmap/!svn/ver/513/trunk/lib/data/pear.unl.edu/UNL_Geography_SpatialData_Campus/spatialdata.sqlite
+END
+spatialdata.pdo.sqlite
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/unl_tourmap/!svn/ver/513/trunk/lib/data/pear.unl.edu/UNL_Geography_SpatialData_Campus/spatialdata.pdo.sqlite
+END
+campus_spatialdata.csv
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/unl_tourmap/!svn/ver/513/trunk/lib/data/pear.unl.edu/UNL_Geography_SpatialData_Campus/campus_spatialdata.csv
+END

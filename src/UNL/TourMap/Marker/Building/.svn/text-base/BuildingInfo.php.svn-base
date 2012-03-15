@@ -1,0 +1,28 @@
+<?php
+class UNL_TourMap_BuildingInfo
+{
+    public $code;
+    public $name;
+    public $info;
+
+    function __construct($options = array())
+    {
+        if (!isset($options['code'])) {
+            throw new Exception('No building to show info for!', 403);
+        }
+        $bldgs = new UNL_Common_Building();
+        if (!$bldgs->buildingExists($options['code'])) {
+            throw new Exception('Sorry, that building doesn\'t exist!', 404);
+        }
+
+        $this->code = $options['code'];
+        $this->name = $bldgs->codes[$this->code];
+
+        if (!file_exists(UNL_TourMap::getDataDir().'/building_info/'.$this->code.'.html')) {
+            $this->info = new UNL_TourMap_BuildingInfo_Missing();
+        } else {
+            $this->info = file_get_contents(UNL_TourMap::getDataDir().'/building_info/'.$this->code.'.html');
+        }
+
+    }
+}

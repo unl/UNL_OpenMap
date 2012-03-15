@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/unl_tourmap/!svn/ver/467/trunk/lib/tests/phpsavant.com/Savvy/escape
+END
+object.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/unl_tourmap/!svn/ver/467/trunk/lib/tests/phpsavant.com/Savvy/escape/object.phpt
+END
+string.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/unl_tourmap/!svn/ver/467/trunk/lib/tests/phpsavant.com/Savvy/escape/string.phpt
+END
+Foo.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/unl_tourmap/!svn/ver/467/trunk/lib/tests/phpsavant.com/Savvy/escape/Foo.tpl.php
+END
+echostring.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/unl_tourmap/!svn/ver/467/trunk/lib/tests/phpsavant.com/Savvy/escape/echostring.tpl.php
+END
+raw.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/unl_tourmap/!svn/ver/467/trunk/lib/tests/phpsavant.com/Savvy/escape/raw.tpl.php
+END

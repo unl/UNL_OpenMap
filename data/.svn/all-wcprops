@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/unl_tourmap/!svn/ver/514/trunk/data
+END
+policestations.xml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/unl_tourmap/!svn/ver/393/trunk/data/policestations.xml
+END
+bikeracks.kml
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/unl_tourmap/!svn/ver/353/trunk/data/bikeracks.kml
+END
+csv_to_array.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/unl_tourmap/!svn/ver/384/trunk/data/csv_to_array.php
+END
+all_buildings.csv
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/unl_tourmap/!svn/ver/226/trunk/data/all_buildings.csv
+END
+additional_buildings.csv
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/unl_tourmap/!svn/ver/384/trunk/data/additional_buildings.csv
+END
+emergencyphones.csv
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/unl_tourmap/!svn/ver/266/trunk/data/emergencyphones.csv
+END
+locations.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/unl_tourmap/!svn/ver/384/trunk/data/locations.inc.php
+END
+hidden_buildings.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/unl_tourmap/!svn/ver/450/trunk/data/hidden_buildings.inc.php
+END
+buildings.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/unl_tourmap/!svn/ver/384/trunk/data/buildings.inc.php
+END

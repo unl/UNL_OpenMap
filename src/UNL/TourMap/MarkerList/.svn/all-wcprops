@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/unl_tourmap/!svn/ver/487/trunk/src/UNL/TourMap/MarkerList
+END
+EmergencyPhones.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/unl_tourmap/!svn/ver/287/trunk/src/UNL/TourMap/MarkerList/EmergencyPhones.php
+END
+AllMarkers.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/unl_tourmap/!svn/ver/317/trunk/src/UNL/TourMap/MarkerList/AllMarkers.php
+END
+BikeRacks.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/unl_tourmap/!svn/ver/353/trunk/src/UNL/TourMap/MarkerList/BikeRacks.php
+END
+Buildings.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/unl_tourmap/!svn/ver/345/trunk/src/UNL/TourMap/MarkerList/Buildings.php
+END
+PoliceStations.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/unl_tourmap/!svn/ver/352/trunk/src/UNL/TourMap/MarkerList/PoliceStations.php
+END
+GeoRSS.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/unl_tourmap/!svn/ver/393/trunk/src/UNL/TourMap/MarkerList/GeoRSS.php
+END
+KML.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/unl_tourmap/!svn/ver/358/trunk/src/UNL/TourMap/MarkerList/KML.php
+END
+Aggregate.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/unl_tourmap/!svn/ver/439/trunk/src/UNL/TourMap/MarkerList/Aggregate.php
+END

@@ -1,0 +1,55 @@
+10
+
+dir
+514
+http://gforge.unl.edu/svn/unl_tourmap/trunk/lib/.xmlregistry/packages/pear.php.net
+http://gforge.unl.edu/svn/unl_tourmap
+
+
+
+2010-01-29T20:53:49.808434Z
+15
+bbieber2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1cf23e20-7bb8-40a5-8b47-a3681a35ae33
+
+Cache_Lite
+dir
+
+Console_Getopt
+dir
+
+Structures_Graph
+dir
+
+DB
+dir
+
+DB_DataObject
+dir
+
+Archive_Tar
+dir
+
+PEAR
+dir
+
+Date
+dir
+
+XML_Util
+dir
+

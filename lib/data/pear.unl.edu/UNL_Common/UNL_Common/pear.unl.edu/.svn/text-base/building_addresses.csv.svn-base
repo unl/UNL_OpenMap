@@ -1,0 +1,293 @@
+name,address1,bl_id,ABBREV,site_id,city_id
+Chase Hall,3605 Fair,A002,CHA,UNL-EAST,LINCOLN
+Agricultural Hall,3550 East Campus Loop South,A003,AGH,UNL-EAST,LINCOLN
+C.Y. Thompson Library,1625 N 38th,A004,CYT,UNL-EAST,LINCOLN
+Miller Hall,1675 Arbor Drive,A006,MILH,UNL-EAST,LINCOLN
+Biochemistry Hall,1705 N 38th,A009,BCH,UNL-EAST,LINCOLN
+Activities Building,1700 N 34th,A016,AB,UNL-EAST,LINCOLN
+Kiesselbach Crops Research Laboratory,1870 N 37th,A017,KCR,UNL-EAST,LINCOLN
+Agricultural Communications Building,3625 East Campus Loop South,A021,ACB,UNL-EAST,LINCOLN
+Leverton Hall,1700 N 35th,A023,LEV,UNL-EAST,LINCOLN
+Plant Science Teaching Greenhouse,3855 Fair,A024,PSTG,UNL-EAST,LINCOLN
+Teaching Greenhouse West,3850 Center Drive,A027,TGW,UNL-EAST,LINCOLN
+Teaching Greenhouse East,3850 Center Drive,A028,TGE,UNL-EAST,LINCOLN
+"Utility Plant, East Campus",1935 N 37th,A029,ECUP,UNL-EAST,LINCOLN
+Family Resource Center,1615 N 35th,A032,FRC,UNL-EAST,LINCOLN
+Implement Outstate Storage Building,3700 Merrill,A034,IMPS,UNL-EAST,LINCOLN
+Insectary Building,3865 Fair,A035,INSB,UNL-EAST,LINCOLN
+Keim Hall,1825 N 38th,A036,KEIM,UNL-EAST,LINCOLN
+Loeffel Meat Laboratory,3940 Fair,A039,LML,UNL-EAST,LINCOLN
+Entomology Hall,1700 East Campus Mall,A040,ENTO,UNL-EAST,LINCOLN
+Mussehl Hall,1915 N 38th,A041,MUSH,UNL-EAST,LINCOLN
+Animal Science Feed Storage,3765 Merrill,A045,ANSF,UNL-EAST,LINCOLN
+Poultry Storage Building E,East Campus,A046,POSE,UNL-EAST,LINCOLN
+Poultry Building H & I,3715 Merrill,A047,POHI,UNL-EAST,LINCOLN
+Poultry Building F,3745 Merrill,A048,POF,UNL-EAST,LINCOLN
+Burr Hall,1701 N 35th,A052,BRH,UNL-EAST,LINCOLN
+Fedde Hall,1601 N 35th,A053,FRH,UNL-EAST,LINCOLN
+Love Memorial Hall,3420 Holdrege,A055,LRH,UNL-EAST,LINCOLN
+Conservation & Survey Annex,2000 N 34th,A057,CSA,UNL-EAST,LINCOLN
+Service Building,1915 N 37th,A058,SVC,UNL-EAST,LINCOLN
+Larsen tractor Museum,1925 N 37th,A060,LTM,UNL-EAST,LINCOLN
+Forestry Hall,1800 N 37th,A061,FORS,UNL-EAST,LINCOLN
+Water Sciences Laboratory,1840 N 37th,A062,WL,UNL-EAST,LINCOLN
+Hardin Hall,3310 Holdrege and 1600 N 33rd,A065,HARH,UNL-EAST,LINCOLN
+Forage Research laboratory - USDA,3870 Center Drive,A066,FORL,UNL-EAST,LINCOLN
+Baker Hall,1830 N 38th,A067,MBH,UNL-EAST,LINCOLN
+College of Dentistry,4000 East Campus Loop South,A068,DENT,UNL-EAST,LINCOLN
+National Agroforeserty Center - USDA,1945 N 38th,A069,NAC,UNL-EAST,LINCOLN
+Stewart Seed Laboratory,2101 N 38th,A071,SSL,UNL-EAST,LINCOLN
+Landscape Services Quonset,3520 East Campus Loop North,A074,LSQ,UNL-EAST,LINCOLN
+Textile Design Studio,1605 N 35th,A075,TDS,UNL-EAST,LINCOLN
+Staples Child Development Laboratory,1855 N 35th,A076,CDL,UNL-EAST,LINCOLN
+Warehouse 1,3630 East Campus Loop North,A077,W1,UNL-EAST,LINCOLN
+Terry M. Carpenter Telecommunications Center,1800 N 33rd,A079,TELC,UNL-EAST,LINCOLN
+Warehouse 2,2105 N 38th,A080,W2,UNL-EAST,LINCOLN
+Insecticide Storage Building,1855 N 39th,A083,ISTO,UNL-EAST,LINCOLN
+Home Economics Building,1650 N 35th,A084,HECO,UNL-EAST,LINCOLN
+McCollum Hall,1875 N 42nd,A085,LAW,UNL-EAST,LINCOLN
+Nebraska East Union,1705 Arbor Drive,A086,NEU,UNL-EAST,LINCOLN
+Barkley Memorial Center,4075 East Campus Loop South,A087,BKC,UNL-EAST,LINCOLN
+Veterinary Diagnostic Building,1900 N 42nd,A088,VDC,UNL-EAST,LINCOLN
+Veterinary Basic Sciences Building,1880 N 42nd,A089,VBS,UNL-EAST,LINCOLN
+Animal Research Facility,2100 N 42nd,A090,ARF,UNL-EAST,LINCOLN
+Animal Holding Facility,2000 N 43rd,A091,AHOF,UNL-EAST,LINCOLN
+Plant Sciences Hall,1875 N 38th,A092,PLSH,UNL-EAST,LINCOLN
+Agronomy & Horticulture Greenhouse 4,3855 Merrill,A093,AHG4,UNL-EAST,LINCOLN
+Orchard House,4417 Fair,A094,ORCH,UNL-EAST,LINCOLN
+Behlen Metal Storage Building,1931 N 37th,A095,BSTO,UNL-EAST,LINCOLN
+Splinter Laboratories,2000 N 35th,A096,SPL,UNL-EAST,LINCOLN
+Sewage Sterilization Plant,2005 N 43rd,A097,SEW,UNL-EAST,LINCOLN
+Agronomy & Horticulture Greenhouse 3,2065 N 38th,A098,AHG3,UNL-EAST,LINCOLN
+Plant Pathology Greenhouse,2075 N 38th,A099,PPG,UNL-EAST,LINCOLN
+Chemical Storage Building,3702 Merrill,A100,CSTO,UNL-EAST,LINCOLN
+National Agroforestry Center Storage Building - USDA,2140 N 38th,A101,NAST,UNL-EAST,LINCOLN
+Animal Science Complex,3940 Fair,A102,ANSC,UNL-EAST,LINCOLN
+Welpton Courtroom Building,1875 N 42nd,A103,WELC,UNL-EAST,LINCOLN
+Agronomy & Horticulture Outstate Testing Laboratory,3720 Merrill,A104,AHTL,UNL-EAST,LINCOLN
+Animal Science Loafing Sheds,4011 East Campus Loop North,A105,LOAF,UNL-EAST,LINCOLN
+Agronomy & Horticulture Physiology Building,3710 Merrill,A106,AHPH,UNL-EAST,LINCOLN
+Waste Accumulation Building,3740 Merrill,A107,WAST,UNL-EAST,LINCOLN
+USDA Physiology Building - USDA,3708 Merrill,A108,USDP,UNL-EAST,LINCOLN
+Landscape Services East Campus,3520 East Campus Loop North,A109,LSEC,UNL-EAST,LINCOLN
+Nebraska Statewide Arboretum Greenhouse,2150 N 38th,A110,NSAG,UNL-EAST,LINCOLN
+Pesticide Stoarge Building,4421 Fair,A111,PEST,UNL-EAST,LINCOLN
+Perrin Porch,3621 East Campus Loop South,A115,PER,UNL-EAST,LINCOLN
+National Agroforestry Annex 1 - USDA,Temporary,A116,NAF1,UNL-EAST,LINCOLN
+National Agroforestry Annex 2 - USDA,Temporary,A117,NAF2,UNL-EAST,LINCOLN
+School of Natural Resouces Sciences,East Campus,A119,SNRS,UNL-EAST,LINCOLN
+Agronomy & Horticulture/Forestry Shops,1935 N 38th,A121,AHFS,UNL-EAST,LINCOLN
+Library Depository Retrieval Facility,2055 N 35th,A122,LDR,UNL-EAST,LINCOLN
+Quilt Center,1523 N 33rd,A124,QSC,UNL-EAST,LINCOLN
+Community Garden Shed,4401 Fair,A125,GRDN,UNL-EAST,LINCOLN
+Morrison Center,4240 Fair,A126,MOLR,UNL-EAST,LINCOLN
+Modular Laboratory,1976 N 42nd,A127,MODL,UNL-EAST,LINCOLN
+Animal Science Storage Building,3735 Merrill,A128,ASTO,UNL-EAST,LINCOLN
+Campus Rec Equipment Building 5 - East Campus Rec Fields,4100 East Campus Loop North,A130,ORB5,UNL-EAST,LINCOLN
+Campus Rec Equipment Building 6 - East Campus Tennis Courts,1800 N 40th,A131,ORB6,UNL-EAST,LINCOLN
+Animal Science Hoop 1,3975 East Campus Loop North,A132,ASH1,UNL-EAST,LINCOLN
+Landscape Services Quonset,,A133,LSQ,UNL-EAST,LINCOLN
+Food Industry Complex,1625 Arbor Drive,A201,FOOD,UNL-EAST,LINCOLN
+Filley Hall,1625 Arbor Drive,A202,FYH,UNL-EAST,LINCOLN
+Colonial Terrace Apartment A-1,3330 Starr,A540,CTA1,UNL-EAST,LINCOLN
+Colonial Terrace Apartment A-2,3400 Starr,A541,CTA2,UNL-EAST,LINCOLN
+Colonial Terrace Apartment A-3,3323 Starr,A542,CTA3,UNL-EAST,LINCOLN
+Colonial Terrace Apartment A-4,3401 Starr,A543,CTA4,UNL-EAST,LINCOLN
+Colonial Terrace Apartment B,3344 Starr,A544,CTB,UNL-EAST,LINCOLN
+Colonial Terrace Apartment C-1,3320 Starr,A545,CTC1,UNL-EAST,LINCOLN
+Colonial Terrace Apartment C-2,3340 Starr,A546,CTC2,UNL-EAST,LINCOLN
+Colonial Terrace Apartment C-3,3315 Starr,A547,CTC3,UNL-EAST,LINCOLN
+Colonial Terrace Apartment C-4,3333 Starr,A548,CTC4,UNL-EAST,LINCOLN
+Colonial Terrace Apartment D-1,3301 Starr,A549,CTD1,UNL-EAST,LINCOLN
+Colonial Terrace Apartment D-2,3345 Starr,A550,CTD2,UNL-EAST,LINCOLN
+Colonial Terrace Apartments Shop 1,3332 Starr,A551,CTS1,UNL-EAST,LINCOLN
+Colonial Terrace Apartments Shop 2,3342 Starr,A552,CTS2,UNL-EAST,LINCOLN
+University Park Apartments A,4300 Holdrege,A561,UPAA,UNL-EAST,LINCOLN
+University Park Apartments B,4300 Holdrege,A562,UPAB,UNL-EAST,LINCOLN
+University Park Apartments C,4300 Holdrege,A563,UPAC,UNL-EAST,LINCOLN
+University Park Apartments D,4300 Holdrege,A564,UPAD,UNL-EAST,LINCOLN
+Agronomy & Horticulture Greenhouse 1,2100 N 38th,A721,AHG1,UNL-EAST,LINCOLN
+Entomology Greenhouse 2,2110 N 38th,A722,EGR2,UNL-EAST,LINCOLN
+Entomology Greenhouse 3,2120 N 38th,A723,EGR3,UNL-EAST,LINCOLN
+Agronomy & Horticulture Greenhouse 2,2041 N 38th,A731,AHG2,UNL-EAST,LINCOLN
+Natural Resources Research Annex,2051 N 38th,A732,NRRA,UNL-EAST,LINCOLN
+Technology Park,4701 Innovation Drive; I-80 & I-180,B007,B007,UNL-LINC,LINCOLN
+Sapp Recreation Facility,841 N 14th,C000,CREC,UNL-CITY,LINCOLN
+Canfield Administration Building South,501 N 14th,C001,ADMS,UNL-CITY,LINCOLN
+Andrews Hall,625 N 14th,C003,ANDR,UNL-CITY,LINCOLN
+Architecture Hall,402 Stadium Drive,C004,ARCH,UNL-CITY,LINCOLN
+Avery Hall,1144 T,C005,AVH,UNL-CITY,LINCOLN
+Bessey Hall,1215 U,C007,BESY,UNL-CITY,LINCOLN
+Brace Laboratory,510 Stadium Drive,C008,BL,UNL-CITY,LINCOLN
+Burnett Hall,1220 T,C009,BURN,UNL-CITY,LINCOLN
+Coliseum,1350 Vine,C010,COL,UNL-CITY,LINCOLN
+Love Library South,1248 R,C011,LLS,UNL-CITY,LINCOLN
+Love Library North & Link,1300 R,C013,LLN,UNL-CITY,LINCOLN
+Ferguson Hall,1130 S,C014,FERG,UNL-CITY,LINCOLN
+Architecture Hall West,400 Stadium Drive,C019,ARCW,UNL-CITY,LINCOLN
+Pershing Military & Naval Science Building,1360 Vine,C021,M&N,UNL-CITY,LINCOLN
+Morrill Hall,1335 U,C022,MORR,UNL-CITY,LINCOLN
+Mueller Tower,1306 U,C023,MUEL,UNL-CITY,LINCOLN
+Nebraska Hall,900 N 16th,C024,NH,UNL-CITY,LINCOLN
+Woods Art Building,1140 R,C025,WAB,UNL-CITY,LINCOLN
+Nebraska Union,1400 R,C026,NU,UNL-CITY,LINCOLN
+"Utility Plant, City Campus",905 N 14th,C028,CCUP,UNL-CITY,LINCOLN
+Seaton Hall,1525 U,C030,SEH,UNL-CITY,LINCOLN
+Benton Hall,1535 U,C031,BENH,UNL-CITY,LINCOLN
+Fairfield Hall,1545 U,C032,FAIR,UNL-CITY,LINCOLN
+Selleck Quad Building K,600 N 15th,C035,SELK,UNL-CITY,LINCOLN
+Raymond Hall,540 N 16th,C036,RAYH,UNL-CITY,LINCOLN
+Love Hall,540 N 16th,C037,LOVH,UNL-CITY,LINCOLN
+Heppner Hall,540 N 16th,C038,HEPP,UNL-CITY,LINCOLN
+Piper Hall,540 N 16th,C039,PIPH,UNL-CITY,LINCOLN
+Cather Hall,609 N 17th,C040,CRH,UNL-CITY,LINCOLN
+Pound Hall,513 N 17th,C041,PRH,UNL-CITY,LINCOLN
+Cather-Pound-Neihardt Food Service Building,540 N 16th,C042,CPRF,UNL-CITY,LINCOLN
+Richards Hall,560 Stadium Drive,C044,RH,UNL-CITY,LINCOLN
+Sheldon Museum of Art,451 N 12th,C047,SHEL,UNL-CITY,LINCOLN
+College of Business Administration,512 N 12th,C048,CBA,UNL-CITY,LINCOLN
+Stadium East,1100 T,C049,STE,UNL-CITY,LINCOLN
+Stadium West,1100 T,C050,STW,UNL-CITY,LINCOLN
+Canfield Administartion Building North,503 N 14th,C052,ADMN,UNL-CITY,LINCOLN
+Temple Building,1209 R,C053,TEMP,UNL-CITY,LINCOLN
+University Health Center,1500 U,C054,UHC,UNL-CITY,LINCOLN
+Henzlik Hall,1430 Vine,C055,HENZ,UNL-CITY,LINCOLN
+Westbrook Music Building,1104 R,C058,WMB,UNL-CITY,LINCOLN
+Behlen Laboratory,500 Stadium Drive,C060,BEL,UNL-CITY,LINCOLN
+Abel Hall,880 N 17th,C061,ARH,UNL-CITY,LINCOLN
+Sandoz Hall,820 N 17th,C062,SZRH,UNL-CITY,LINCOLN
+Abel-Sandoz Food Service Building,840 N 17th,C063,ASFS,UNL-CITY,LINCOLN
+Foreburger Building,,C066,FORB,UNL-CITY,LINCOLN
+501 Building,501 Stadium Dr,C068,501,UNL-CITY,LINCOLN
+American Mathematics Competitions Building,1740 Vine,C072,1740,UNL-CITY,LINCOLN
+Mabel Lee Hall,840 N 14th,C073,MABL,UNL-CITY,LINCOLN
+Hamilton Hall,639 N 12th,C074,HAH,UNL-CITY,LINCOLN
+Oldfather Hall,660 N 12th,C075,OLDH,UNL-CITY,LINCOLN
+Business Services Complex,1700 Y,C076,BSC,UNL-CITY,LINCOLN
+Landscape Services,1340 N 17th,C084,LAND,UNL-CITY,LINCOLN
+Scott Engineering Center,844 N 16th,C086,SEC,UNL-CITY,LINCOLN
+940 N 17th,940 N 17th,C090,940,UNL-CITY,LINCOLN
+Kimball Recital Hall,1113 R,C091,KRH,UNL-CITY,LINCOLN
+Devaney Sports Center,1600 Court,C100,DEV,UNL-CITY,LINCOLN
+Manter Hall,1101 T,C101,MANT,UNL-CITY,LINCOLN
+Schorr Center,1100 T,C102,SHOR,UNL-CITY,LINCOLN
+Campus Recreation Boat House,1000 N 16th,C105,BOAT,UNL-CITY,LINCOLN
+Broyhill Fountain,1400 R,C107,BHF,UNL-CITY,LINCOLN
+Sheldon Sculpture Garden,451 N 12th,C108,SSG,UNL-CITY,LINCOLN
+Watson Building,1309 N 17th,C112,WAT,UNL-CITY,LINCOLN
+Devaney Sports Center Warehouse,2100 State Fair Park Drive,C118,SPCW,UNL-CITY,LINCOLN
+Wick Alumni Center,1520 R,C120,WICK,UNL-CITY,LINCOLN
+Mabel Lee Fields IPC,1433 W,C122,MIPC,UNL-CITY,LINCOLN
+Mabel Lee Fields Pressbox,1433 W,C126,MPBX,UNL-CITY,LINCOLN
+Reunion Building,905 N 16th,C128,REUN,UNL-CITY,LINCOLN
+Scott Engineering Center Link,880 N 16th,C129,SLNK,UNL-CITY,LINCOLN
+Whittier Building,2200 Vine and 2225 W,C130,WHIT,UNL-CITY,LINCOLN
+Lied Center for Performing Arts,301 N 12th,C131,LIED,UNL-CITY,LINCOLN
+Track Office Building,1631 Court,C133,TOB,UNL-CITY,LINCOLN
+Culture Center,333 N 14th,C134,333,UNL-CITY,LINCOLN
+Landscape Services Metal Building,1340 N 17th,C138,LSMB,UNL-CITY,LINCOLN
+Architecture Hall Link,404 Stadium Drive,C140,ARCL,UNL-CITY,LINCOLN
+Cook Pavilion,845 N 14th,C143,COOK,UNL-CITY,LINCOLN
+1820 R Street,1820 R,C144,1820,UNL-CITY,LINCOLN
+Syford House,700 N 16th,C146,SYF,UNL-CITY,LINCOLN
+Husker Hall,705 N 23rd,C147,HUSK,UNL-CITY,LINCOLN
+Beadle Center,1901 Vine,C148,BEAD,UNL-CITY,LINCOLN
+Bioscience Greenhouses,1901 Vine,C149,BIOG,UNL-CITY,LINCOLN
+University Press Distribution Center,401 N 9th,C150,UPDC,UNL-CITY,LINCOLN
+Facilities Mangement & Planning,1901 Y,C152,FMP,UNL-CITY,LINCOLN
+Facilities Management C,1901 Y,C153,FMC,UNL-CITY,LINCOLN
+Facilities Management D,1901 Y,C154,FMD,UNL-CITY,LINCOLN
+Facilities Management E,1901 Y,C155,FME,UNL-CITY,LINCOLN
+Facilities Management F,1901 Y,C156,FMF,UNL-CITY,LINCOLN
+Alexander Building,1410 Q AND 312 N 14th,C158,ALEX,UNL-CITY,LINCOLN
+U Street Apartments,2224 U,C159,UST,UNL-CITY,LINCOLN
+Vine Street Apartments West,2222 Vine,C160,2222,UNL-CITY,LINCOLN
+Vine Street Apartments East,2244 Vine,C161,2244,UNL-CITY,LINCOLN
+Stadium Drive Parking Garage,625 Stadium Drive,C162,SDPG,UNL-CITY,LINCOLN
+Landscape Services Chemical Storage Building,1340 N 17th,C163,LSCS,UNL-CITY,LINCOLN
+UNL Credit Union,1630 Q,C164,UNLCU,UNL-CITY,LINCOLN
+Andersen Hall,200 Centennial Mall N,C165,ANDN,UNL-CITY,LINCOLN
+420 University Terrace,420 University Terrace,C167,420,UNL-CITY,LINCOLN
+University Press Warehouse,800 R,C169,UPW,UNL-CITY,LINCOLN
+Teachers College Hall,1400 Vine,C170,TEAC,UNL-CITY,LINCOLN
+Kauffman Academic Residential Center,630 N 14th,C171,KAUF,UNL-CITY,LINCOLN
+Othmer Hall,820 N 16th,C173,OTHM,UNL-CITY,LINCOLN
+Hewit Place,1155 Q,C174,HEWP,UNL-LINC,LINCOLN
+Mary Riepma Ross Media Arts Center-Van Brunt Visitors Center,313 N 13th,C175,RVB,UNL-CITY,LINCOLN
+17th & R Parking Garage,300 N 17th,C176,17PG,UNL-CITY,LINCOLN
+Hazardous Materials Facility,639 N 12th,C177,HZM,UNL-CITY,LINCOLN
+Nebraska Champions Club,707 Stadium Drive,C178,NECH,UNL-CITY,LINCOLN
+The Courtyards,733 N 17th,C180,CORT,UNL-CITY,LINCOLN
+Jackie Gaughn Multicultural Center,1505 S Street,C181,GAUN,UNL-CITY,LINCOLN
+14th & Avery Parking Garage,1111 N 14th,C183,14PG,UNL-CITY,LINCOLN
+420 North 20th - Off Campus,420 N 20th,C184,PL02,UNL-CITY,LINCOLN
+Transportation Services,1931 N Antelope Valley Parkway,C185,TRAN,UNL-CITY,LINCOLN
+The Village,1055 N 16th,C186,VILL,UNL-CITY,LINCOLN
+Facilities Management Shops,942 N 22nd,C187,FMS,UNL-CITY,LINCOLN
+900 North 22nd,900 N 22nd,C188,900,UNL-CITY,LINCOLN
+Powder Coat Facility,900 N 22nd,C189,PCF,UNL-CITY,LINCOLN
+Landscape Services Metal Canopy,1340 N 17th,C190,LSMC,UNL-CITY,LINCOLN
+Service Shed,900 N 22nd,C191,SERV,UNL-CITY,LINCOLN
+Pump Shed,900 N 22nd,C192,PUMP,UNL-CITY,LINCOLN
+Water Treatment Facility,900 N 22nd,C193,WTF,UNL-CITY,LINCOLN
+Materials Storage Building,900 N 22nd,C194,MSTO,UNL-CITY,LINCOLN
+Osborne Athletic Complex,800 Stadium Drive,C195,MSTD,UNL-CITY,LINCOLN
+Haymarket Park Baseball Stadium Complex,403 Line Drive Circle,C196,HAYB,UNL-LINC,LINCOLN
+Haymarket Park Softball Stadium Complex,400 Line Drive Circle,C197,HAYS,UNL-LINC,LINCOLN
+Bus Garage,1935 N Antelope Valley Parkway,C198,BUSG,UNL-CITY,LINCOLN
+Hawks Championship Center,1111 Salt Creek Roadway,C200,HCC,UNL-CITY,LINCOLN
+Campus Rec Equipment Building 1 - Abel Rec Area,950 N 18th,C201,ORB1,UNL-CITY,LINCOLN
+Campus Rec Equipment Building 2 - Cather Tennis Courts,500 N 17th,C202,ORB2,UNL-CITY,LINCOLN
+Campus Rec Equipment Building 3 - Whittier Fields,2251 W,C203,ORB3,UNL-CITY,LINCOLN
+Campus Rec & Athletics Equipment Building 4 - Cather Tennis Courts,500 N 17th,C204,ORB4,UNL-CITY,LINCOLN
+Physical Sciences Building,855 N 16th,C205,PSB,UNL-CITY,LINCOLN
+The Robert K. Knoll Residential Center,440 N 17th,C206,KNOL,UNL-CITY,LINCOLN
+Campus Rec Equipment Building 7 - Mabel Lee Fields,1433 W,C207,ORB7,UNL-CITY,LINCOLN
+Abel-Sandoz Welcome Center,830 N 17th,C208,ASWC,UNL-CITY,LINCOLN
+19th & Vine Parking Garage,1830 Vine Street,C209,,UNL-CITY,LINCOLN
+Nanoscience Facility,,C214,NAN,UNL-CITY,LINCOLN
+University of Nebraska-Lincoln's Childrens Center,2225 W Street,C217,CHC,UNL-CITY,LINCOLN
+Selleck Quad Building D,600 N 15th,C331,SELD,UNL-CITY,LINCOLN
+Selleck Quad Building E,600 N 15th,C332,SELE,UNL-CITY,LINCOLN
+Selleck Quad Building F,600 N 15th,C333,SELF,UNL-CITY,LINCOLN
+Selleck Quad Building G,600 N 15th,C334,SELG,UNL-CITY,LINCOLN
+Selleck Quad Building H,600 N 15th,C335,SELH,UNL-CITY,LINCOLN
+Selleck Quad Building J,600 N 15th,C341,SELJ,UNL-CITY,LINCOLN
+Selleck Quad Building L - Food Service,600 N 15th,C342,SELL,UNL-CITY,LINCOLN
+Stadium North Concessions & Lavatories,1100 T,C491,STNC,UNL-CITY,LINCOLN
+Stadium  North,1100 T,C492,STNO,UNL-CITY,LINCOLN
+Stadium Skyboxes,1100 T,C500,STSB,UNL-CITY,LINCOLN
+Hewit Academic Center,1100 T,C501,HEWA,UNL-CITY,LINCOLN
+Stadium South,1100 T,C502,STSO,UNL-CITY,LINCOLN
+Stadium South Concessions & Lavatories,1100 T,C503,STSC,UNL-CITY,LINCOLN
+Abel-Sadoz Swimming Pool,830 N 17th,C615,ASP,UNL-CITY,LINCOLN
+Harper Hall,1150 N 14th,C691,HRH,UNL-CITY,LINCOLN
+Schramm Hall,1130 N 14th,C692,SCRH,UNL-CITY,LINCOLN
+Smith Hall,1120 N 14th,C693,SMRH,UNL-CITY,LINCOLN
+Harper Dining Center,1140 N 14th,C694,HDC,UNL-CITY,LINCOLN
+University Housing Office,1115 N 16th,C774,UHOF,UNL-CITY,LINCOLN
+University Press Offices (233 N 8th),233-247 N 8th,L005,L005,UNL-LINC,LINCOLN
+"Center on Children, Family & Law","Suite 302, 121 South 13th",L006,CCFL,UNL-LINC,LINCOLN
+Public Policy Center,"Suite 303, 121 South 13th",L007,PPC,UNL-LINC,LINCOLN
+Computer Science (Prairie Fire),"Suite 304, 121 South 13th",L008,PFIR,UNL-LINC,LINCOLN
+Architecture-Urban Community Improvement Program - MainStreet (Old City Hall),920 O St (Old City Hall),L009,L009,UNL-LINC,LINCOLN
+Commerce Court Building - UNMC Nursing,1230 O Street,L010,CCRT,UNL-LINC,LINCOLN
+2332 Kimarra,2332 Kimarra,L012,L012,UNL-LINC,LINCOLN
+2611 Kimco Drive,2611 Kimco Drive,L013,L013,UNL-LINC,LINCOLN
+2511 Kimco Court A,2511 Kimco Court,L014,L014,UNL-LINC,LINCOLN
+2511 Kimco Court B,2511 Kimco Court,L015,L015,UNL-LINC,LINCOLN
+2541 North 27th,2541 North 27th,L016,L016,UNL-LINC,LINCOLN
+Campus Rec Ice Skating Rink - State Fair Park,"1800 State Fair Park Drive, Linc, 68508",L018,L018,UNL-LINC,LINCOLN
+Fleming Fields Park Concessions Bldg,3233 Huntington Ave,L019,FFCB,UNL-LINC,LINCOLN
+Fleming Fields Park Maintenance Bldg,3233 Huntington Ave,L020,FFMS,UNL-LINC,LINCOLN
+1111 Lincoln Mall Nebraska Press,1111 Lincoln Mall,L021,L021,UNL-LINC,LINCOLN
+Office of Technology Development,1320 Q Street,L022,OTD,UNL-LINC,LINCOLN
+Miller and Paine,121 South 13th,L023,L023,UNL-LINC,LINCOLN
+3921 West Craw - LTAP,3921 West Craw,L024,L024,UNL-LINC,LINCOLN
+1000 North 22nd Street,1000 N 22nd St,L025,L025,UNL-LINC,LINCOLN
+Gold's Building,1033 O Street,L026,L026,UNL-LINC,LINCOLN
+4800 NW 35th,4800 NW 35th St,L027,L027,UNL-LINC,LINCOLN
+215 Centennial Mall,215 Centennial Mall,L028,L028,UNL-LINC,LINCOLN
+Wells Fargo Building,1248 O Street,L029,L029,UNL-LINC,LINCOLN
+201 N 13th,201 N 13th,L030,L030,UNL-LINC,LINCOLN
+Sharp Building,"206 S 13th, Suite 1000",L031,L031,UNL-LINC,LINCOLN

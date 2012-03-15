@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/unl_tourmap/!svn/ver/467/trunk/lib/tests/phpsavant.com/Savvy/globals
+END
+basic.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/unl_tourmap/!svn/ver/467/trunk/lib/tests/phpsavant.com/Savvy/globals/basic.tpl.php
+END
+escape.arrays.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/unl_tourmap/!svn/ver/467/trunk/lib/tests/phpsavant.com/Savvy/globals/escape.arrays.phpt
+END
+escape.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/unl_tourmap/!svn/ver/467/trunk/lib/tests/phpsavant.com/Savvy/globals/escape.phpt
+END
+basic.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/unl_tourmap/!svn/ver/467/trunk/lib/tests/phpsavant.com/Savvy/globals/basic.phpt
+END
+escape.nestedarrays.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/unl_tourmap/!svn/ver/467/trunk/lib/tests/phpsavant.com/Savvy/globals/escape.nestedarrays.phpt
+END

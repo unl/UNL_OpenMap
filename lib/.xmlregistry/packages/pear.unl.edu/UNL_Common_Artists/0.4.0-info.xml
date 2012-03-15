@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packagerversion="2.0.0" version="2.0" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.0     http://pear.php.net/dtd/package-2.0.xsd">
+ <name>UNL_Common_Artists</name>
+ <channel>pear.unl.edu</channel>
+ <summary>This package contains information on the artists, and sculptures, on campus.It is a DB_DataObject which accesses the artist info from an sqlite database.</summary>
+ <description>Artists and Sculptures on the UNL Campus</description>
+ <lead>
+  <name>Brett Bieber</name>
+  <user>saltybeagle</user>
+  <email>brett.bieber@gmail.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2010-01-29</date>
+ <time>14:33:03</time>
+ <version>
+  <release>0.4.0</release>
+  <api>0.4.0</api>
+ </version>
+ <stability>
+  <release>beta</release>
+  <api>beta</api>
+ </stability>
+ <license uri="http://www1.unl.edu/wdn/wiki/Software_License">BSD License</license>
+ <notes>
+* Package re-organization.
+* Use Pyrus for packaging.
+* Autoload the schema, don't use the .ini files.
+ </notes>
+ <contents>
+  <dir name="/">
+   <file name="UNL/Common/Sculptures.php" role="php" md5sum="c24f8904d9aa680082a846ca1fe0523e"/>
+   <file name="UNL/Common/Artists_sculptures.php" role="php" md5sum="9b5f8a0924d5273c8271a2d0cb6a0ccc"/>
+   <file name="UNL/Common/Artists/config.inc.php" role="php" md5sum="5e07aae4df0ce83d89bff03384d88bc3"/>
+   <file name="UNL/Common/Artists.php" role="php" md5sum="67ea85beb53b45180fdfd756e68e3f2d"/>
+   <file name="examples/sculpture_example.php" role="doc" md5sum="e1ab33d321f35e7bb011ff5c8df77895"/>
+   <file name="examples/artists_example.php" role="doc" md5sum="e5c780ee9d73ea494fb419b07c20b8b5"/>
+   <file name="data/unl_common_artists.sqlite" role="data" md5sum="b6fccc7ce37e55bf2f90fb59e9693558"/>
+   <file name="data/sculptures.csv" role="data" md5sum="e8c7ca07393de9bd5f7a8153c97810fa"/>
+   <file name="data/artists_sculptures.csv" role="data" md5sum="e7a28a477b65b3a37f31c0634a903915"/>
+   <file name="data/artists.csv" role="data" md5sum="78d5f635a15ac6536b5c9d5dd1243aca"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.0.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.3</min>
+   </pearinstaller>
+   <package>
+    <name>DB_DataObject</name>
+    <channel>pear.php.net</channel>
+    <min>0.8</min>
+   </package>
+  </required>
+ </dependencies>
+ <phprelease>
+  <changelog>
+   <release>
+    <version>
+     <release>0.0.1</release>
+     <api>0.0.1</api>
+    </version>
+    <stability>
+     <release>alpha</release>
+     <api>alpha</api>
+    </stability>
+    <date>2006-04-28</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+First release, just artists for the sculptures on campus.
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.1.0</release>
+     <api>0.1.0</api>
+    </version>
+    <stability>
+     <release>alpha</release>
+     <api>alpha</api>
+    </stability>
+    <date>2006-05-01</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+Added sculpture images. $sculpture-&gt;imageurl
+Expanded first example.
+Added sculpture example.
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.2.0</release>
+     <api>0.2.0</api>
+    </version>
+    <stability>
+     <release>alpha</release>
+     <api>alpha</api>
+    </stability>
+    <date>2007-04-24</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+Feature Release
+		Latitude and Longitude for sculptures.
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.2.1</release>
+     <api>0.2.1</api>
+    </version>
+    <stability>
+     <release>alpha</release>
+     <api>alpha</api>
+    </stability>
+    <date>2008-07-02</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+Switch connection to use mysqli connection to prevent database connection locks and reuse connections.
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.3.0</release>
+     <api>0.3.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2008-07-02</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+Swich to sqlite database.
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.3.1</release>
+     <api>0.3.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2008-07-16</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+Remove quotes in sculpture lat+lon data.
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.3.2</release>
+     <api>0.3.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2010-01-29</date>
+    <license uri="http://www1.unl.edu/wdn/wiki/Software_License">BSD License</license>
+    <notes>
+* Fix &quot;Comments starting with # are deprecated&quot;
+* Update license to BSD
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.4.0</release>
+     <api>0.4.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2010-01-29</date>
+    <license uri="http://www1.unl.edu/wdn/wiki/Software_License">BSD License</license>
+    <notes>
+* Package re-organization.
+* Use Pyrus for packaging.
+* Autoload the schema, don't use the .ini files.
+   </notes>
+   </release>
+  </changelog>
+ </phprelease>
+</package>

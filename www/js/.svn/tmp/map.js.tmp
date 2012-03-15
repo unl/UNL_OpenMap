@@ -1,0 +1,537 @@
+UNLTourMap = (function() {
+	var $ = (typeof WDN.jQuery !== 'undefined') ? WDN.jQuery : jQuery;
+	return {
+		map            : {},
+		markers        : [],
+		infoCache      : {},
+		boundsListener : '',
+		markerData     : {},
+
+		initialize : function() {
+			UNLTourMap.setUpGoogleMap();
+
+			$('#selectMarkers li').click(function(){
+				type = $(this).attr('id');
+				type = type.split('check_');
+				featureType = type[1];
+				if(mobile){
+					$('#selectMarkers').hide();
+					$('#loading').show();
+				}
+				UNLTourMap.toggleMarkers(featureType);
+			});
+
+			// Set up hash change monitoring
+			$(window).bind('hashchange', function(e) {
+				var code = location.hash.replace('#', '');
+				WDN.log("we have a hash: "+code);
+
+				if (WDN.analytics) {
+					WDN.analytics.callTrackEvent('UNL_Map', 'showBuilding', code);
+				}
+
+				if (code) {
+					$('#loading').show();
+					//UNLTourMap.hideAllMarkers('buildings');
+					UNLTourMap.openBuildingInfo(code);
+				}
+			});
+			$('#actionLayers > a').click(function(){$('#selectMarkers').toggle();return false;});
+			$('#selectMarkers li a').click(function(e){e.preventDefault();});
+
+			if (mobile) {
+				return;
+			}
+
+			// Allow map legend to be draggable
+			$('#mapLegend').draggable({
+				containment : '#map_canvas',
+				handle : $('#mapLegend')
+			});
+			$('#txt1').focus(function() {
+				$(this).siblings('label').hide();
+			});
+			$('#mapSearch label').click(function(){
+				$(this).hide().siblings('#txt1').focus();
+			});
+			if ($('#txt1').val() !== "") {
+				$('#txt1').siblings('label').hide();
+			}
+			$('#txt1').blur(function() {
+				if ($(this).val() === "") {
+					$(this).siblings('label').show();
+				}
+			});
+			$('form#marker_list').submit(function(event) {
+				window.location.hash = '#' + $('form#marker_list select').val();
+				event.preventDefault();
+			});
+
+			$('#listAll').click(function() {
+				$('#txt1').trigger('keydown');
+				$('#mapSearch label').hide();
+			});
+			// Set up the search autocomplete
+			$('#txt1').autocomplete({
+				delay: 555,
+				minLength: 0,
+				source: function(request, response) {
+					$.ajax({
+						url: UNL_TOUR_URL+'?view=search&q='+request.term+'&format=json',
+						dataType: "json",
+						success: function(data) {
+							WDN.log('Caught search result data');
+							var rows = [];
+							var result = 0;
+							for (var code in data['buildings']) {
+								WDN.log(code);
+								var printCampus = '';
+								if (data['buildings'][code].campus == 'lincoln') {
+									data['buildings'][code].campus = 'Lincoln, NE';
+								} else {
+									var printCampus = ' Campus';
+								}
+								rows[result] = {
+										label : '<span class="buildingCode">'+code+' </span>' +
+												'<span class="format">'+data['buildings'][code].name+'</span>' +
+												' <span class="campus">('+data['buildings'][code].campus+printCampus+')</span>',
+										value : data['buildings'][code].name,
+										key : '#'+code,
+										buildingCode : code
+								};
+								result++;
+							}
+							response(rows);
+						}
+					});
+				},
+				search: function(e, ui) {
+					$('#txt1').addClass('loading');
+				},
+				open : function(e, ui) {
+					$('#txt1').removeClass('loading');
+				},
+				focus: function(e, ui) {
+					$('a.indicator').removeClass('indicator');
+					$('a:contains("'+ui.item.buildingCode+'")').addClass('indicator');
+				},
+				select: function(e, ui) {
+					window.location.href = UNL_TOUR_URL+ui.item.key;
+				}
+			});
+		},
+
+		setUpGoogleMap : function() {
+			var mapOptions = {
+				zoom                  : (mobile ? 15 : 16),
+				maxZoom               : UNLTourMap.mapMaxZoom,
+				minZoom               : UNLTourMap.mapMinZoom,
+				center                : new google.maps.LatLng(UNLTourMap.centerLat,UNLTourMap.centerLng),
+				mapTypeControl        : true, /* Toggle MapTypeId control */
+				mapTypeId             : google.maps.MapTypeId.ROADMAP,
+				mapTypeControlOptions : {
+					mapTypeIds: [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID],
+					style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+				}
+			};
+
+			// Create the map and attach the map to #map_canvas
+			UNLTourMap.map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+
+			google.maps.event.addListener(UNLTourMap.map, 'maptypeid_changed', function() {
+				if (UNLTourMap.map.getMapTypeId() === google.maps.MapTypeId.ROADMAP) {
+					UNLTourMap.map.overlayMapTypes.insertAt(0, new UNLTourMap.UNLCampusTileSet('unl'));
+					UNLTourMap.map.overlayMapTypes.insertAt(1, new UNLTourMap.UNLCampusTileSet('streets'));
+				} else {
+					UNLTourMap.map.overlayMapTypes.pop(1);
+					UNLTourMap.map.overlayMapTypes.pop(0);
+				}
+			});
+
+			if (!mobile) {
+				// Trigger the maptypeid_changed event so the UNL layers load
+				google.maps.event.trigger(UNLTourMap.map, 'maptypeid_changed');
+				// Setup the Maximize button and add to navigation controls
+				var fullViewportControlDiv = this.fullViewportControl();
+				fullViewportControlDiv.index = 1;
+				UNLTourMap.map.controls[google.maps.ControlPosition.LEFT].push(fullViewportControlDiv);
+			};
+		},
+
+		UNLCampusTileSet : function(tileset) {
+			return {
+				tileSize : new google.maps.Size(256,256),
+				getTile  : function(coord, zoom, ownerDocument) {
+					var div = ownerDocument.createElement('DIV');
+					div.style.width = this.tileSize.width + 'px';
+					div.style.height = this.tileSize.height + 'px';
+					var x = coord.x % (1 << zoom);
+					var ymax = 1 << zoom;
+					var y = ymax - coord.y -1;
+					var extension = (tileset == 'unl' ? 'jpg' : 'png');
+					// @TODO This is a temp fix for around Devaney until we get a large image of innovation campus
+					if (zoom == 16 && y == 40924 && (x == 15163 || x == 15164 || x == 15165 || x == 15166)) {
+						extension = 'png';
+					}
+					if (zoom > 15) {
+						div.style.backgroundImage = 'url("'+UNL_TOUR_URL+'images/tilesets/'+tileset+'/'+zoom+'/'+ x + '/' + y + '.' + extension + '")';
+					} else {
+						div.style.backgroundImage = 'none';
+					}
+					return div;
+				}
+			};
+		},
+
+		fullViewportControl : function() {
+			var minText	 = 'Min -';
+			var maxText	 = 'Max +';
+			var maxTitle = 'Click to maximize in your browser window';
+			var minTitle = 'Click to return to normal size';
+
+			var controlDiv = $('<div class="google-ctl" />');
+
+			var toggleMaxUI = function(full) {
+				controlDiv.text(full ? minText : maxText);
+				controlDiv.attr('title', full ? minTitle : maxTitle);
+			};
+
+			var fullScreen = false;
+			toggleMaxUI(fullScreen);
+
+			controlDiv.click(function() {
+				var currentCenter = UNLTourMap.map.getCenter();
+				if (!fullScreen) {
+					$("#map_canvas").css({'position':'fixed','top':'0','left':'0','z-index':'125'});
+					$("#mapLegend").css({'position':'fixed','z-index':'150'});
+					$("body").css({'overflow':'hidden'});
+					fullScreen = true;
+				} else {
+					$("#map_canvas").css({'position':'relative','z-index':''});
+					$("#mapLegend").css({'position':'absolute', 'z-index':''});
+					$("body").css({'overflow':''});
+					fullScreen = false;
+				}
+				google.maps.event.trigger(UNLTourMap.map,'resize');
+				UNLTourMap.map.setCenter(currentCenter);
+				toggleMaxUI(fullScreen);
+			});
+
+			return controlDiv[0];
+		},
+
+		setUpMarkers : function(markerType, campus, display) {
+			if(display = 'undefined'){display = true;}
+			WDN.log('time to setup the markers for '+ markerType);
+			if (typeof(UNLTourMap.markerData[markerType]) == 'undefined') {
+				$.getJSON(UNLTourMap.getMarkersJSONURL(markerType, campus),
+					function (data) {
+						WDN.log('we\'ve got the JSON');
+						UNLTourMap.markerData[featureType] = data[markerType];
+						UNLTourMap.handleJSONMarkers(markerType, UNLTourMap.markerData, true);
+					}
+				);
+			} else {
+				UNLTourMap.handleJSONMarkers(markerType, UNLTourMap.markerData, display);
+			}
+		},
+
+		handleJSONMarkers : function(markerType, data, display) {
+			WDN.log('time to handle the JSON markers for '+ markerType);
+			WDN.log('we want the be displayed? '+ display);
+			for (var code in data[markerType]){
+				UNLTourMap.addLocation(data[markerType][code], markerType, display);
+			}
+			if (display == true){
+				UNLTourMap.showAllMarkers(markerType);
+			} else {
+				UNLTourMap.hideAllMarkers(markerType);
+			}
+			$('#loading').hide();
+		},
+
+		getMarkersJSONURL : function(markerType, campus) {
+			switch (markerType) {
+			case 'bldgnoimage':
+				var url = UNL_TOUR_URL+'?view=filter&feature=buildings&filter=hasnoimages&format=json&name='+markerType;
+				return url;
+			default:
+				var viewType = markerType;
+				if (markerType == 'buildings' && campus) {
+					viewType = campus+'buildingmarkers';
+				}
+				var url = UNL_TOUR_URL+"?view="+viewType+"&format=json";
+				return url;
+			}
+		},
+
+		hideAllMarkers : function(markerType) {
+			for (var i in UNLTourMap.markers[markerType]) {
+				UNLTourMap.markers[markerType][i].setVisible(false);
+				i++;
+				if (i==UNLTourMap.markers[markerType].length) {$('#loading').hide();}
+			}
+			$("#check_" + markerType).removeClass('on');
+
+		},
+
+		hideMarker : function(){
+
+		},
+
+		showAllMarkers : function(markerType) {
+			for (var i in UNLTourMap.markers[markerType]) {
+				UNLTourMap.markers[markerType][i].setVisible(true);
+				i++;
+				if (i==UNLTourMap.markers[markerType].length) {$('#loading').hide();}
+			}
+			$("#check_" + markerType).addClass('on');
+		},
+
+		showMarker : function(){
+
+		},
+
+		toggleMarkers : function(markerType) {
+			WDN.log('toggleMarkers('+markerType+')');
+			if (typeof(UNLTourMap.markers[markerType]) == 'undefined') {
+				UNLTourMap.setUpMarkers(markerType, true);
+				WDN.log('setting up markers for '+markerType+', baby');
+			} else {
+				if ($("#check_" + markerType).hasClass('on')){
+					UNLTourMap.hideAllMarkers(markerType);
+				} else {
+					UNLTourMap.showAllMarkers(markerType);
+				}
+			}
+		},
+
+		getLocationType : function(loc) {
+			return "point";
+		},
+
+		addLocation : function(loc, markerType, display) {
+			var type = UNLTourMap.getLocationType(loc);
+			switch(type) {
+				case 'polygon':
+					UNLTourMap.addPolygon(loc);
+					break;
+				default:
+					UNLTourMap.addPoint(loc, markerType, display);
+			}
+		},
+
+		panTo : function (latitude, longitude) {
+			UNLTourMap.map.panTo(new google.maps.LatLng(latitude, longitude));
+		},
+
+		openBuildingInfo : function(code) {
+			if (typeof(UNLTourMap.markers['buildings']) == 'undefined') {
+				UNLTourMap.setUpMarkers('buildings');
+			}
+			if (UNLTourMap.markers['buildings'][code]) {
+				UNLTourMap.markers['buildings'][code].setVisible(true);
+				UNLTourMap.markers['buildings'][code].showinfo();
+			}
+		},
+
+		addPoint : function(loc, markerType, display) {
+			if (typeof(UNLTourMap.markers[markerType]) == 'undefined') {
+				UNLTourMap.markers[markerType] = [];
+			}
+			// Trim the 's' off the end of the marker type
+			var markerIcon = markerType.substr(0, markerType.length-1);
+			var marker = new google.maps.Marker({
+				position : new google.maps.LatLng(loc.position.point.latitude, loc.position.point.longitude),
+				map      : UNLTourMap.map,
+				title    : loc.name,
+				icon     : UNL_TOUR_URL+'images/markers/google/'+markerIcon+'.png',
+				shadow   : UNL_TOUR_URL+'images/markers/google/shadow.png',
+				visible  : display
+			});
+
+			marker.showinfo = function() {
+				var position = marker.getPosition();
+				if (UNLTourMap.infoBox) {
+					UNLTourMap.infoBox.setMap(null);
+				}
+				UNLTourMap.map.setCenter(position);
+				if (!mobile) {
+					UNLTourMap.map.setOptions({scrollwheel:false,draggable:false,disableDoubleClickZoom:true});
+					UNLTourMap.map.panBy(0,-260);
+					google.maps.event.addListenerOnce(UNLTourMap.map,'idle',function() {
+						UNLTourMap.infoBox = new UNLTourMapInfoBox.InfoBox({latlng: position, map: UNLTourMap.map},function() {
+							$('#infoBoxContent').remove();
+							if (!UNLTourMap.infoCache[loc.code]) {
+								WDN.get(UNL_TOUR_URL+markerIcon+'/'+loc.code+'/info?format=partial', function(data, textStatus) {
+									UNLTourMap.infoCache[loc.code] = data;
+									$('#infoBox').append(data);
+								});
+							} else {
+								$('#infoBox').append(UNLTourMap.infoCache[loc.code]);
+							}
+							$('#infoBox').fadeIn("slow");
+						});
+					});
+				} else { //we're using a different display for mobile
+					UNLTourMap.map.setOptions({scrollwheel:false,draggable:true,disableDoubleClickZoom:false});
+					UNLTourMap.map.setZoom(17);
+					$('#infoBox').empty();
+					if (!UNLTourMap.infoCache[loc.code]) {
+						WDN.get(UNL_TOUR_URL+markerIcon+'/'+loc.code+'/info?format=partial', function(data, textStatus) {
+							$('#loading').hide();
+							UNLTourMap.infoCache[loc.code] = data;
+							$('#infoBox').append(data).css({'height' : '43px'});
+							$('#infoBox h4').after('<a class="more toOpen" href="#">More</a>');
+							$('#infoBox a.more').click(function(){
+								if($(this).hasClass('toOpen')){
+									$('#infoBox').css({'height' : '90%'});
+									$('#infoBox h4 ~ *').show();
+									$(this).toggleClass('toOpen').html('Close');
+									return false;
+								} else {
+									$(this).toggleClass('toOpen').html('More');
+									$('#infoBox').css({'height' : '43px'});
+									$('#infoBox h4 ~ *').not('a.more').hide();
+								}
+							});
+						});
+					}
+				}
+			};
+
+			google.maps.event.addListener(marker, "click", function() {
+				if (markerType == 'buildings' && window.location.hash.replace('#', '') != loc.code) {
+					window.location.hash = loc.code;
+				} else {
+					marker.showinfo();
+				}
+			});
+
+			$('a[href$="/'+loc.code+'"]').live('click', function(e) {
+				$('html,body').animate({scrollTop:$('#titlegraphic').offset().top}, 400);
+				window.location.hash = loc.code;
+				return false;
+			});
+
+			UNLTourMap.markers[markerType][loc.code] = marker;
+		},
+
+		addPolygon : function(loc) {
+
+		},
+
+		// Setup image thumbnail switching in the info view
+		setupImageSwitch : function() {
+			$('.markerImages img:not(:first)').click(function() {
+				var img1 = $('.markerImages img:first').attr('src');
+				var img2 = $(this).attr('src');
+
+				$('.markerImages img:first').attr('src',img2);
+				$(this).attr('src',img1);
+
+				return false;
+			});
+
+			$('.markerImages img:first').click(function() {
+				$('#infoBoxContent > div').hide();
+				$('#fullImage').show();
+
+				var clickedImage = $(this).attr('src');
+				var lgImage = clickedImage.substring(0, clickedImage.length-2) + 'lg';
+
+				$('#fullImage img').attr('src',lgImage);
+
+				return false;
+			});
+		}
+	};
+})();//END UNLTourMap
+
+UNLTourMapInfoBox = new function() {
+	/* Source: http://gmaps-samples-v3.googlecode.com/svn/trunk/infowindow_custom/infowindow-custom.html
+	 * @param {GLatLng} latlng Point to place bar at
+	 * @param {Map} map The map on which to display this InfoBox.
+	 * @param {Object} opts Passes configuration options - content
+	 */
+	this.InfoBox = function(opts,callback) {
+		this.callback = callback;
+		google.maps.OverlayView.call(this);
+		this.latlng_ = opts.latlng;
+		this.map_ = opts.map;
+
+		// Once the properties of this OverlayView are initialized, set its map so
+		// that we can display it.	This will trigger calls to panes_changed and
+		// draw.
+		this.setMap(this.map_);
+	};
+
+	this.InfoBox.prototype = new google.maps.OverlayView();
+
+	this.InfoBox.prototype.onRemove = function() {
+		if (this.div_) {
+		this.div_.parentNode.removeChild(this.div_);
+		this.div_ = null;
+		}
+	};
+
+	this.InfoBox.prototype.draw = function() {
+		// Creates the element if it doesn't exist already.
+		this.createElement();
+		if (!this.div_) return;
+
+		// Calculate the DIV coordinates of the center of the map
+		var pixPosition = this.getProjection().fromLatLngToDivPixel(this.map_.getCenter());
+		if (!pixPosition) return;
+
+		// Now position our DIV based on the DIV coordinates of the center
+		this.div_.style.left = (pixPosition.x - WDN.jQuery('#infoBox').width()/2) + "px";
+		this.div_.style.top = (pixPosition.y - WDN.jQuery('#infoBox').height() + 155) + "px";
+		//this.div_.style.display = 'block';
+	};
+
+	/* Creates the DIV representing this InfoBox in the floatPane.	If the panes
+	 * object, retrieved by calling getPanes, is null, remove the element from the
+	 * DOM.	If the div exists, but its parent is not the floatPane, move the div
+	 * to the new pane.
+	 * Called from within draw.	Alternatively, this can be called specifically on
+	 * a panes_changed event.
+	 */
+	this.InfoBox.prototype.createElement = function() {
+		var panes = this.getPanes();
+		var div = this.div_;
+		if (!div) {
+			// This does not handle changing panes.	You can set the map to be null and
+			// then reset the map to move the div.
+			div = this.div_ = document.createElement("div");
+			div.id = "infoBox";
+			var closeDiv = document.createElement("div");
+			closeDiv.id = "infoBoxClose";
+			var pointerDiv = document.createElement("div");
+			pointerDiv.id ="infoBoxPointer";
+
+			function removeInfoBox(ib) {
+				return function() {
+				ib.map_.setOptions({scrollwheel:true,draggable:true,disableDoubleClickZoom:false});
+				ib.setMap(null);
+				};
+			}
+
+			google.maps.event.addDomListener(closeDiv, 'click', removeInfoBox(this));
+
+			// Clear previous infoBox if it exists
+			panes.floatPane.innerHTML = '';
+			panes.floatPane.appendChild(closeDiv);
+			panes.floatPane.appendChild(div);
+			panes.floatPane.appendChild(pointerDiv);
+			// Run the callback function that puts in the content
+			this.callback();
+		} else if (div.parentNode != panes.floatPane) {
+			// The panes have changed.	Move the div.
+			div.parentNode.removeChild(div);
+			panes.floatPane.appendChild(div);
+		} else {
+			// The panes have not changed, so no need to create or move the div.
+		}
+	};
+};//END UNLTourMapInfoBox

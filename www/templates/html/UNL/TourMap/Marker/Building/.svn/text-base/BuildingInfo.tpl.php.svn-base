@@ -1,0 +1,9 @@
+<h4><?php echo $context->name; ?><span class="code">(<?php echo $context->code; ?>)</span></h4>
+<?php
+if (gettype($context->getRaw('info')) == 'string') {
+    echo $context->getRaw('info');
+} else {
+    echo $savvy->render($context->info);
+}
+
+?>

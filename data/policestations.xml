@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:georss="http://www.georss.org/georss">
+<channel>
+<title>UNL Tour Feed</title>
+<link>http://maps.unl.edu/</link>
+<description>Police Station Feed for UNL Tour</description>
+    <item>
+        <title>University Police Substation</title>
+        <description>
+            <![CDATA[
+            <h6>Address</h6>
+            <p>
+            Stadium Drive Parking Garage<br />
+            Lincoln, NE 68588
+            </p>
+            <h6>Phone</h6>
+            <p>
+            Emergency: 911<br />
+            UNL Police: 402-472-2222
+            </p>
+            <h6>Website</h6>
+            <p>
+            <a href="http://police.unl.edu/">police.unl.edu</a>
+            </p>
+            ]]>
+        </description>
+        <geo:lat>40.819363</geo:lat>
+        <geo:long>-96.70732</geo:long>
+        <georss:point>40.819363 -96.70732</georss:point>
+        <georss:featuretypetag>police</georss:featuretypetag>
+        <georss:featurename>Campus Police</georss:featurename>
+        <dc:subject>police</dc:subject>
+    </item>
+    <item>
+        <title>University Police Headquarters</title>
+        <description>
+            <![CDATA[
+            <p>
+            Entrance located on the northwest corner of the parking garage. Visitor parking (for police business only) available in the garage on the north side.</p>
+            <h6>Address</h6>
+            <p>
+            300 N. 17th St.<br />
+            Lincoln, NE 68588
+            </p>
+            <h6>Phone</h6>
+            <p>
+            Emergency: 911<br />
+            UNL Police: 402-472-2222
+            </p>
+            <h6>Website</h6>
+            <p>
+            <a href="http://police.unl.edu/">police.unl.edu</a>
+            </p>
+            ]]>
+        </description>
+        <geo:lat>40.816661</geo:lat>
+        <geo:long>-96.696521</geo:long>
+        <georss:point>40.816661 -96.696521</georss:point>
+        <georss:featuretypetag>police</georss:featuretypetag>
+        <georss:featurename>Campus Police</georss:featurename>
+        <dc:subject>police</dc:subject>
+    </item>
+    <item>
+        <title>Lincoln Police Department Headquarters</title>
+        <description>
+            <![CDATA[
+            <p>
+            Located in the Justice and Law Enforcement Center at 10th and Lincoln Mall, on the first floor. </p>
+            <h6>Address</h6>
+            <p>
+            575 S. 10th Street<br />
+            Lincoln, NE 68508
+            </p>
+            <h6>Phone</h6>
+            <p>
+            Emergency: 911<br />
+            <a href="http://lincoln.ne.gov/city/police/tele.htm">Lincoln Police Telephone Directory</a>
+            </p>
+            <h6>Website</h6>
+            <p>
+            <a href="http://lincoln.ne.gov/city/police/">lincoln.ne.gov/city/police/</a>
+            </p>
+            ]]>
+        </description>
+        <geo:lat>40.808095</geo:lat>
+        <geo:long>-96.707751</geo:long>
+        <georss:point>40.808095 -96.707751</georss:point>
+        <georss:featuretypetag>police</georss:featuretypetag>
+        <georss:featurename>Lincoln Police</georss:featurename>
+        <dc:subject>police</dc:subject>
+    </item>
+    <item>
+        <title>Lincoln Police Department Center Team Station</title>
+        <description>
+            <![CDATA[
+            <p>
+            Located on the northwest corner of N. 27th Street and Holdrege Streets. The team station is home to the Center Team and serves as an enhanced access point for the community where it is located. This project was undertaken as a greater plan to improve the North 27th Street area. 
+            </p>
+            <h6>Address</h6>
+            <p>
+            1501 N. 27th Street<br />
+            Lincoln, NE 68503
+            </p>
+            <h6>Phone</h6>
+            <p>
+            Emergency: 911<br />
+            <a href="http://lincoln.ne.gov/city/police/tele.htm">Lincoln Police Telephone Directory</a>
+            </p>
+            <h6>Website</h6>
+            <p>
+            <a href="http://lincoln.ne.gov/city/police/">lincoln.ne.gov/city/police/</a>
+            </p>
+            ]]>
+        </description>
+        <geo:lat>40.828321</geo:lat>
+        <geo:long>-96.68285</geo:long>
+        <georss:point>40.828321 -96.68285</georss:point>
+        <georss:featuretypetag>police</georss:featuretypetag>
+        <georss:featurename>Lincoln Police</georss:featurename>
+        <dc:subject>police</dc:subject>
+    </item>
+    <item>
+        <title>Lincoln Police Department Northeast Team Station</title>
+        <description>
+            <![CDATA[
+            <p>
+            The Northeast Team has a new full service police station located at 4843 Huntington in the heart of University Place. The building, Originally constructed as a telephone exchange in the mid 1920's, has been completely remodeled as a functional police station capable of acting as a back up to any existing police facility.
+            </p>
+            <h6>Address</h6>
+            <p>
+            4843 Huntington Ave<br />
+            Lincoln, NE 68504
+            </p>
+            <h6>Phone</h6>
+            <p>
+            Emergency: 911<br />
+            <a href="http://lincoln.ne.gov/city/police/tele.htm">Lincoln Police Telephone Directory</a>
+            </p>
+            <h6>Website</h6>
+            <p>
+            <a href="http://lincoln.ne.gov/city/police/">lincoln.ne.gov/city/police/</a>
+            </p>
+            ]]>
+        </description>
+        <geo:lat>40.836997</geo:lat>
+        <geo:long>-96.65264</geo:long>
+        <georss:point>40.836997 -96.65264</georss:point>
+        <georss:featuretypetag>police</georss:featuretypetag>
+        <georss:featurename>Lincoln Police</georss:featurename>
+        <dc:subject>police</dc:subject>
+    </item>
+</channel>
+</rss>

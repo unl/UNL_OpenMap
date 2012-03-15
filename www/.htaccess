@@ -1,0 +1,9 @@
+RewriteEngine On
+
+RewriteBase /workspace/UNL_TourMap/www/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite to the index
+RewriteRule . index.php [L]

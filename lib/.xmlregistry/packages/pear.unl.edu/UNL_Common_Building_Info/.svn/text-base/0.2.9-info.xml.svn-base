@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packagerversion="1.8.0alpha1" version="2.0" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.0     http://pear.php.net/dtd/package-2.0.xsd">
+ <name>UNL_Common_Building_Info</name>
+ <channel>pear.unl.edu</channel>
+ <summary>This package contains descriptions and information for buildings on the UNL Campus.</summary>
+ <description>Information on the Buildings on the UNL Campus</description>
+ <lead>
+  <name>Brett Bieber</name>
+  <user>saltybeagle</user>
+  <email>brett.bieber@gmail.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2009-12-23</date>
+ <time>14:21:25</time>
+ <version>
+  <release>0.2.9</release>
+  <api>0.2.0</api>
+ </version>
+ <stability>
+  <release>beta</release>
+  <api>beta</api>
+ </stability>
+ <license uri="http://www1.unl.edu/wdn/wiki/Software_License">New BSD License</license>
+ <notes>
+Add info for Morrisson Life Sciences building.
+ </notes>
+ <contents>
+  <dir name="/">
+   <file baseinstalldir="UNL/Common/Building" md5sum="cfc3739ad7b186b40ca61a704a7bd01a" name="Info.php" role="php">
+    <tasks:replace from="@@DATA_DIR@@" to="data_dir" type="pear-config"/>
+   </file>
+   <file baseinstalldir="UNL/Common/Building" md5sum="41503849575a55bae3626f92efe0bb68" name="examples/info_example.php" role="doc"/>
+   <file baseinstalldir="UNL/Common/Building" md5sum="7f2bf7477493873e78d78a0624f63bc1" name="examples/CVS/Root" role="doc"/>
+   <file baseinstalldir="UNL/Common/Building" md5sum="262ba4157c4622f1c8ebc0b7827e8ac8" name="examples/CVS/Repository" role="doc"/>
+   <file baseinstalldir="UNL/Common/Building" md5sum="588baae67bff93172e0e24e7dce62de8" name="examples/CVS/Entries" role="doc"/>
+   <file baseinstalldir="UNL/Common/Building" md5sum="7f2bf7477493873e78d78a0624f63bc1" name="data/CVS/Root" role="data"/>
+   <file baseinstalldir="UNL/Common/Building" md5sum="ab385918199a84c5541b93f83211a3ed" name="data/CVS/Repository" role="data"/>
+   <file baseinstalldir="UNL/Common/Building" md5sum="bdaa60059b2fd161a68a1a03e93f095d" name="data/CVS/Entries" role="data"/>
+   <file baseinstalldir="UNL/Common/Building" md5sum="462ef51239db55c5b70924c561a688fb" name="data/building_info.sqlite" role="data"/>
+   <file baseinstalldir="UNL/Common/Building" md5sum="a30736067ad34855c551cd24a4ccdead" name="data/building_info.csv" role="data"/>
+   <file baseinstalldir="UNL/Common/Building" md5sum="7f2bf7477493873e78d78a0624f63bc1" name="CVS/Root" role="data"/>
+   <file baseinstalldir="UNL/Common/Building" md5sum="9996118baacf9d938da80bc44c141d56" name="CVS/Repository" role="data"/>
+   <file baseinstalldir="UNL/Common/Building" md5sum="9006dbc4a5624565dadde0ef4e611d48" name="CVS/Entries" role="data"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.0.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.3</min>
+   </pearinstaller>
+   <package>
+    <name>UNL_Common</name>
+    <channel>pear.unl.edu</channel>
+    <min>0.2.0</min>
+   </package>
+  </required>
+ </dependencies>
+ <phprelease>
+  <changelog>
+   <release>
+    <version>
+     <release>0.0.1</release>
+     <api>0.0.1</api>
+    </version>
+    <stability>
+     <release>alpha</release>
+     <api>alpha</api>
+    </stability>
+    <date>2006-04-25</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+First release, not all buildings have info
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.2.0</release>
+     <api>0.2.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2008-07-02</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+Move to sqlite databases.
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.2.1</release>
+     <api>0.2.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2008-08-11</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+PIND is now ENTO, replace &amp;amp; with &amp;
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.2.2</release>
+     <api>0.2.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2008-08-18</date>
+    <license uri="http://www1.unl.edu/wdn/wiki/Software_License">New BSD License</license>
+    <notes>
+Add QSC, 501 and change SMAG=&gt;SHEL
+Change license to New BSD
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.2.3</release>
+     <api>0.2.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2008-08-18</date>
+    <license uri="http://www1.unl.edu/wdn/wiki/Software_License">New BSD License</license>
+    <notes>
+Fix 501 building info.
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.2.4</release>
+     <api>0.2.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2008-08-20</date>
+    <license uri="http://www1.unl.edu/wdn/wiki/Software_License">New BSD License</license>
+    <notes>
+Fix QSC building info.
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.2.5</release>
+     <api>0.2.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2008-09-25</date>
+    <license uri="http://www1.unl.edu/wdn/wiki/Software_License">New BSD License</license>
+    <notes>
+Add 420 building info.
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.2.6</release>
+     <api>0.2.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2008-11-18</date>
+    <license uri="http://www1.unl.edu/wdn/wiki/Software_License">New BSD License</license>
+    <notes>
+Update Morrill hall info.
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.2.7</release>
+     <api>0.2.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2008-12-03</date>
+    <license uri="http://www1.unl.edu/wdn/wiki/Software_License">New BSD License</license>
+    <notes>
+Update Kauffman info.
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.2.8</release>
+     <api>0.2.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2009-01-15</date>
+    <license uri="http://www1.unl.edu/wdn/wiki/Software_License">New BSD License</license>
+    <notes>
+Add info for Miller Hall.
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.2.9</release>
+     <api>0.2.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2009-01-26</date>
+    <license uri="http://www1.unl.edu/wdn/wiki/Software_License">New BSD License</license>
+    <notes>
+Add info for Morrisson Life Sciences building.
+   </notes>
+   </release>
+  </changelog>
+ </phprelease>
+</package>

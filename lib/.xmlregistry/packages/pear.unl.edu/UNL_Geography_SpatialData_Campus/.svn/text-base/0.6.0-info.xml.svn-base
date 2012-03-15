@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd" packagerversion="2.0.0">
+ <name>UNL_Geography_SpatialData_Campus</name>
+ <channel>pear.unl.edu</channel>
+ <summary>Spatial Data for buildings on the UNL Campus
+</summary>
+ <description>
+This package contains spatial data, latitude and longitude for buildings on the UNL Campus.</description>
+ <lead>
+  <name>Brett Bieber</name>
+  <user>saltybeagle</user>
+  <email>saltybeagle@php.net</email>
+  <active>yes</active>
+ </lead>
+ <date>2012-01-12</date>
+ <time>10:51:30</time>
+ <version>
+  <release>0.6.0</release>
+  <api>0.4.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www1.unl.edu/wdn/wiki/Software_License">BSD License</license>
+ <notes>Fixes and Additions:
+
+ - Avoid static database reference in SQLite and PDOSQLite drivers
+ - Add geo coordinates for NRRA
+
+Add data driver interfaces</notes>
+ <contents>
+  <dir name="/">
+   <file role="php" name="src/UNL/Geography/SpatialData/UNLMapsWebServiceDriver.php" md5sum="4b3e6c43cb148a52ea922d535c1b76cc"/>
+   <file role="php" name="src/UNL/Geography/SpatialData/SQLiteDriver.php" md5sum="7a519620dd7eacb1e61294efb73877af"/>
+   <file role="php" name="src/UNL/Geography/SpatialData/PDOSQLiteDriver.php" md5sum="2c827cd687beb9116f3347f2bf7e45b6"/>
+   <file role="php" name="src/UNL/Geography/SpatialData/DriverInterface.php" md5sum="86e529bd74202b5c7954ec779157dd26"/>
+   <file role="php" name="src/UNL/Geography/SpatialData/Campus.php" md5sum="299a22d73b09f85a0fe25e7556a8f121"/>
+   <file role="doc" name="examples/spatialdata_example.php" md5sum="bb27cdbd347b1a6fe4b5c19688d9b35f"/>
+   <file role="data" name="data/spatialdata.sqlite" md5sum="46bf891989555a54be8e3deccb5ff064"/>
+   <file role="data" name="data/spatialdata.pdo.sqlite" md5sum="e3f1bb8b6f8fb57df11e0f9162093c6b"/>
+   <file role="data" name="data/campus_spatialdata.csv" md5sum="b89b7a4db411c61357889415d7a8ac86"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.0.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.3</min>
+   </pearinstaller>
+   <package>
+    <name>UNL_Common</name>
+    <channel>pear.unl.edu</channel>
+    <min>0.3.0</min>
+   </package>
+  </required>
+ </dependencies>
+ <phprelease>
+  <changelog>
+   <release>
+    <version>
+     <release>0.0.1</release>
+     <api>0.0.1</api>
+    </version>
+    <stability>
+     <release>alpha</release>
+     <api>alpha</api>
+    </stability>
+    <date>2006-04-25</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+First Release
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.0.2</release>
+     <api>0.0.1</api>
+    </version>
+    <stability>
+     <release>alpha</release>
+     <api>alpha</api>
+    </stability>
+    <date>2006-04-25</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+* Fix bug #3 Will not install without Role_Web
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.1.0</release>
+     <api>0.1.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2007-04-11</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+Building codes should be cast as strings --- fixes info for 333 and 501.
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.2.0</release>
+     <api>0.2.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2007-04-18</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+Add map url to the building info: getMapURL($code)
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.2.1</release>
+     <api>0.2.1</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2007-04-24</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+Fix address in getMapURL($code)
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.2.2</release>
+     <api>0.2.2</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2008-07-01</date>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+Return cleaner address with getMapURL($code)
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.3.0</release>
+     <api>0.3.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2008-07-02</date>
+    <license uri="http://www1.unl.edu/wdn/wiki/Software_License">BSD License</license>
+    <notes>
+Use sqlite for data storage.
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.3.1</release>
+     <api>0.3.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2008-07-17</date>
+    <license uri="http://www1.unl.edu/wdn/wiki/Software_License">BSD License</license>
+    <notes>
+Remove quote and newline at the end of fields.
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.3.2</release>
+     <api>0.3.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2008-07-17</date>
+    <license uri="http://www1.unl.edu/wdn/wiki/Software_License">BSD License</license>
+    <notes>
+PIND is now ENTO
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.3.3</release>
+     <api>0.3.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2008-08-08</date>
+    <license uri="http://www1.unl.edu/wdn/wiki/Software_License">BSD License</license>
+    <notes>
+SMAG is now SHEL
+Add QSC lat and lon
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.3.4</release>
+     <api>0.3.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2008-08-20</date>
+    <license uri="http://www1.unl.edu/wdn/wiki/Software_License">BSD License</license>
+    <notes>
+Add SHOR lat and lon
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.3.5</release>
+     <api>0.3.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2008-08-20</date>
+    <license uri="http://www1.unl.edu/wdn/wiki/Software_License">BSD License</license>
+    <notes>
+Add SLNK, FMP lat and lon
+Change M&amp;amp;N to M&amp;N
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.3.6</release>
+     <api>0.3.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2009-01-07</date>
+    <license uri="http://www1.unl.edu/wdn/wiki/Software_License">BSD License</license>
+    <notes>
+Add MOLR.
+   </notes>
+   </release>
+   <release>
+    <version>
+     <release>0.3.7</release>
+     <api>0.3.0</api>
+    </version>
+    <stability>
+     <release>beta</release>
+     <api>beta</api>
+    </stability>
+    <date>2009-02-12</date>
+    <license uri="http://www1.unl.edu/wdn/wiki/Software_License">BSD License</license>
+    <notes>
+Add SDPG
+   </notes>
+   </release>
+  </changelog>
+ </phprelease>
+</package>

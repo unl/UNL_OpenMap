@@ -1,0 +1,1402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+  <name>UNL  Bike Racks</name>
+  <description><![CDATA[All the bike racks on or near city & east campus!]]></description>
+  <Style id="style40">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style82">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style17">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style79">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style68">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style76">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style26">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style87">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style9">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style64">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style74">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style92">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style7">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style84">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style2">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style69">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style91">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style42">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style58">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style12">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style61">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style27">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style30">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style66">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style4">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style49">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style53">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style46">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style77">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style10">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style78">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style57">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style24">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style15">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style41">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style37">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style72">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style56">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style33">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style62">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style31">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style43">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style59">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style8">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style88">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style28">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style45">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style20">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style19">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style80">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style1">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style73">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style65">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style75">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style50">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style34">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style39">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style54">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style85">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style70">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style11">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style52">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style38">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style60">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style47">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style13">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style67">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style48">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style29">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style18">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style93">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style36">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style25">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style83">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style71">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style90">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style44">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style22">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style21">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style16">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style81">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style14">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style51">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style5">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style23">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style89">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style32">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style63">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style86">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style35">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style6">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style3">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style55">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Placemark>
+    <name>17th &amp; R Street (North)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style40</styleUrl>
+    <Point>
+      <coordinates>-96.696304,40.816784,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Nebraska Union (South East)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style82</styleUrl>
+    <Point>
+      <coordinates>-96.700394,40.817081,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Nebraska Union (South West)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style17</styleUrl>
+    <Point>
+      <coordinates>-96.700584,40.817078,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Nebraska Union (West)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style79</styleUrl>
+    <Point>
+      <coordinates>-96.700989,40.817616,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>CBA (North West)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style68</styleUrl>
+    <Point>
+      <coordinates>-96.703613,40.818192,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>CBA (North East)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style76</styleUrl>
+    <Point>
+      <coordinates>-96.703453,40.818192,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Love Library (under Link)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style26</styleUrl>
+    <Point>
+      <coordinates>-96.702583,40.818253,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>CBA (West North)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style87</styleUrl>
+    <Point>
+      <coordinates>-96.703804,40.817867,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Architecture Hall</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style9</styleUrl>
+    <Point>
+      <coordinates>-96.706314,40.817627,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>CBA (West South)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style64</styleUrl>
+    <Point>
+      <coordinates>-96.703804,40.817783,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>501 Building</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style74</styleUrl>
+    <Point>
+      <coordinates>-96.707108,40.818291,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Westbrook</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style92</styleUrl>
+    <Point>
+      <coordinates>-96.705589,40.816990,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Teacher&#39;s College</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style7</styleUrl>
+    <Point>
+      <coordinates>-96.700577,40.821068,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Avery (North East)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style84</styleUrl>
+    <Point>
+      <coordinates>-96.704178,40.819542,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Henzlik Hall</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style2</styleUrl>
+    <Point>
+      <coordinates>-96.699654,40.820999,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Campus Rec (North East)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style69</styleUrl>
+    <Point>
+      <coordinates>-96.701958,40.821957,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Avery (South East)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style91</styleUrl>
+    <Point>
+      <coordinates>-96.704178,40.819344,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Othmer Hall</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style42</styleUrl>
+    <Point>
+      <coordinates>-96.697731,40.821453,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Walter Scott</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style58</styleUrl>
+    <Point>
+      <coordinates>-96.697968,40.822063,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Walter Scott (under Link)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style12</styleUrl>
+    <Point>
+      <coordinates>-96.697868,40.822506,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Love Library (West)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style61</styleUrl>
+    <Point>
+      <coordinates>-96.703011,40.817974,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Kauffman (South West)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style27</styleUrl>
+    <Point>
+      <coordinates>-96.700775,40.819206,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Kauffman (South East)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style30</styleUrl>
+    <Point>
+      <coordinates>-96.700165,40.819206,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Beadle Center</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style66</styleUrl>
+    <Point>
+      <coordinates>-96.693176,40.819839,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Oldfather Hall</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style4</styleUrl>
+    <Point>
+      <coordinates>-96.703796,40.819695,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Hamilton Hall</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style49</styleUrl>
+    <Point>
+      <coordinates>-96.704315,40.818687,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Courtyards (South)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style53</styleUrl>
+    <Point>
+      <coordinates>-96.697250,40.819412,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>17th &amp; X Street</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style46</styleUrl>
+    <Point>
+      <coordinates>-96.696381,40.823109,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>The Village</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style77</styleUrl>
+    <Point>
+      <coordinates>-96.699425,40.824478,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Schramm Hall</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style10</styleUrl>
+    <Point>
+      <coordinates>-96.699463,40.824684,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Village (South)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style78</styleUrl>
+    <Point>
+      <coordinates>-96.698616,40.823868,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Military &amp; Naval Science</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style57</styleUrl>
+    <Point>
+      <coordinates>-96.701576,40.821083,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>The Village (West North)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style24</styleUrl>
+    <Point>
+      <coordinates>-96.699982,40.824123,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>The Village (West South)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style15</styleUrl>
+    <Point>
+      <coordinates>-96.699989,40.823776,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Smith Hall</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style41</styleUrl>
+    <Point>
+      <coordinates>-96.700615,40.824718,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Mabel Lee (West 1)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style37</styleUrl>
+    <Point>
+      <coordinates>-96.701096,40.821716,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Mabel Lee (West 2)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style72</styleUrl>
+    <Point>
+      <coordinates>-96.701096,40.821651,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Neihardt Residential Center 1</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style56</styleUrl>
+    <Point>
+      <coordinates>-96.697975,40.818691,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>14th &amp; Avery Parking Garage (East)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style33</styleUrl>
+    <Point>
+      <coordinates>-96.701408,40.824207,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Ross</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style62</styleUrl>
+    <Point>
+      <coordinates>-96.702919,40.816441,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Van Brunt</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style31</styleUrl>
+    <Point>
+      <coordinates>-96.702919,40.816338,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Temple (West)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style43</styleUrl>
+    <Point>
+      <coordinates>-96.703842,40.816486,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Memorial Stadium (North West)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style59</styleUrl>
+    <Point>
+      <coordinates>-96.706772,40.821205,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stadium Drive Parking Garage (South West)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style8</styleUrl>
+    <Point>
+      <coordinates>-96.707809,40.819344,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Nebraska Educational Telecommunications</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style88</styleUrl>
+    <Point>
+      <coordinates>-96.672539,40.831028,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Hardin Hall (West)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style28</styleUrl>
+    <Point>
+      <coordinates>-96.672501,40.829140,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Hardin Hall (South)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style45</styleUrl>
+    <Point>
+      <coordinates>-96.671844,40.828602,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Burr / Fedde</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style20</styleUrl>
+    <Point>
+      <coordinates>-96.670135,40.829521,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Love Memorial Hall</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style19</styleUrl>
+    <Point>
+      <coordinates>-96.670601,40.828903,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Agriculture Hall</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style80</styleUrl>
+    <Point>
+      <coordinates>-96.669144,40.829155,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Home Economics Building</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style1</styleUrl>
+    <Point>
+      <coordinates>-96.669441,40.829739,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>East Campus Activities Building</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style73</styleUrl>
+    <Point>
+      <coordinates>-96.669861,40.830761,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Chase Hall</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style65</styleUrl>
+    <Point>
+      <coordinates>-96.668892,40.831120,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Entomology Hall</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style75</styleUrl>
+    <Point>
+      <coordinates>-96.668571,40.830025,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Nebraska East Union (North)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style50</styleUrl>
+    <Point>
+      <coordinates>-96.667519,40.830379,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Nebraska East Union (West)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style34</styleUrl>
+    <Point>
+      <coordinates>-96.667900,40.830112,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Filley Hall</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style39</styleUrl>
+    <Point>
+      <coordinates>-96.667641,40.828884,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>C.Y. Thompson Library</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style54</styleUrl>
+    <Point>
+      <coordinates>-96.666527,40.829384,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Dairy Store</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style85</styleUrl>
+    <Point>
+      <coordinates>-96.666931,40.828629,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Biochemistry Hall</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style70</styleUrl>
+    <Point>
+      <coordinates>-96.666168,40.829990,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Keim Hall</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style11</styleUrl>
+    <Point>
+      <coordinates>-96.666145,40.830574,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Plant Sciences Hall (West)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style52</styleUrl>
+    <Point>
+      <coordinates>-96.666527,40.830990,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Plant Sciences Hall (North)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style38</styleUrl>
+    <Point>
+      <coordinates>-96.666161,40.831352,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Splinter Labs</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style60</styleUrl>
+    <Point>
+      <coordinates>-96.669464,40.832840,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Agronomy and Horticulture Greenhouse</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style47</styleUrl>
+    <Point>
+      <coordinates>-96.665024,40.833839,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Animal Sciences Complex (West)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style13</styleUrl>
+    <Point>
+      <coordinates>-96.665611,40.832108,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Animal Sciences Complex (North)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style67</styleUrl>
+    <Point>
+      <coordinates>-96.665276,40.832912,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>College of Dentistry</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style48</styleUrl>
+    <Point>
+      <coordinates>-96.663834,40.829128,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>East Campus Courts</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style29</styleUrl>
+    <Point>
+      <coordinates>-96.662468,40.830746,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Barkley Memorial Center</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style18</styleUrl>
+    <Point>
+      <coordinates>-96.661064,40.828529,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Nebraska College of Law (South)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style93</styleUrl>
+    <Point>
+      <coordinates>-96.660469,40.830479,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Nebraska College of Law (North)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style36</styleUrl>
+    <Point>
+      <coordinates>-96.660469,40.831337,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Animal Science Complex (South)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style25</styleUrl>
+    <Point>
+      <coordinates>-96.664291,40.831802,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Morrison Center</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style83</styleUrl>
+    <Point>
+      <coordinates>-96.659943,40.831795,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Veterinary Diagnostic Center</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style71</styleUrl>
+    <Point>
+      <coordinates>-96.660362,40.832157,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Crop Research Laboratory</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style90</styleUrl>
+    <Point>
+      <coordinates>-96.667572,40.831264,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Temple (North)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style44</styleUrl>
+    <Point>
+      <coordinates>-96.703369,40.816792,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Sellect Quadrangle: west</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style22</styleUrl>
+    <Point>
+      <coordinates>-96.699814,40.818726,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Nebraska Union (North)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style21</styleUrl>
+    <Point>
+      <coordinates>-96.700081,40.818321,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Sellect Quadrangle: 1</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style16</styleUrl>
+    <Point>
+      <coordinates>-96.699570,40.818607,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Sellect Quadrangle: 2</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style81</styleUrl>
+    <Point>
+      <coordinates>-96.699562,40.818447,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Sellect Quadrangle: 3</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style14</styleUrl>
+    <Point>
+      <coordinates>-96.699478,40.818375,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Sellect Quadrangle: 4</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style51</styleUrl>
+    <Point>
+      <coordinates>-96.699188,40.818367,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Sellect Quadrangle: 5</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style5</styleUrl>
+    <Point>
+      <coordinates>-96.699051,40.818527,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Pound Hall</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style23</styleUrl>
+    <Point>
+      <coordinates>-96.696869,40.818008,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Cather Hall</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style89</styleUrl>
+    <Point>
+      <coordinates>-96.696877,40.819332,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Kappa Kappa Gamma</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style32</styleUrl>
+    <Point>
+      <coordinates>-96.697685,40.819336,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Knoll Residential Center</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style63</styleUrl>
+    <Point>
+      <coordinates>-96.696533,40.817524,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>17th &amp; R (West)</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style86</styleUrl>
+    <Point>
+      <coordinates>-96.696609,40.816635,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Nebraska Historical Society</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style35</styleUrl>
+    <Point>
+      <coordinates>-96.699493,40.817120,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Neihardt Residential Center 2</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style6</styleUrl>
+    <Point>
+      <coordinates>-96.697975,40.818642,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Love Hall</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style3</styleUrl>
+    <Point>
+      <coordinates>-96.697937,40.819023,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Health Center</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style55</styleUrl>
+    <Point>
+      <coordinates>-96.699387,40.820087,0.000000</coordinates>
+    </Point>
+  </Placemark>
+</Document>
+</kml>

@@ -1,0 +1,31 @@
+
+[artists]
+id = 129
+first_name = 130
+middle_name = 2
+last_name = 130
+dob = 6
+dod = 6
+info = 66
+
+[artists__keys]
+id = N
+
+[artists_sculptures]
+artist_id = 129
+sculpture_id = 129
+
+[artists_sculptures__keys]
+
+[sculptures]
+id = 129
+title = 130
+media = 130
+date = 6
+info = 194
+imageurl = 2
+lat = 1
+lon = 1
+
+[sculptures__keys]
+id = N

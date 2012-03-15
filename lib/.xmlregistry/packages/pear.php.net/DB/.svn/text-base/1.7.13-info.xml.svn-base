@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packagerversion="1.6.2" version="2.0" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+ <name>DB</name>
+ <channel>pear.php.net</channel>
+ <summary>Database Abstraction Layer</summary>
+ <description>DB is a database abstraction layer providing:
+* an OO-style query API
+* portability features that make programs written for one DBMS work with other DBMS's
+* a DSN (data source name) format for specifying database servers
+* prepare/execute (bind) emulation for databases that don't support it natively
+* a result object for each query response
+* portable error codes
+* sequence emulation
+* sequential and non-sequential row fetching as well as bulk fetching
+* formats fetched rows as associative arrays, ordered arrays or objects
+* row limit support
+* transactions support
+* table information interface
+* DocBook and phpDocumentor API documentation
+
+DB layers itself on top of PHP's existing
+database extensions.
+
+Drivers for the following extensions pass
+the complete test suite and provide
+interchangeability when all of DB's
+portability options are enabled:
+
+  fbsql, ibase, informix, msql, mssql,
+  mysql, mysqli, oci8, odbc, pgsql,
+  sqlite and sybase.
+
+There is also a driver for the dbase
+extension, but it can't be used
+interchangeably because dbase doesn't
+support many standard DBMS features.
+
+DB is compatible with both PHP 4 and PHP 5.</description>
+ <lead>
+  <name>Daniel Convissor</name>
+  <user>danielc</user>
+  <email>danielc@php.net</email>
+  <active>yes</active>
+ </lead>
+ <lead>
+  <name>Adam Harvey</name>
+  <user>aharvey</user>
+  <email>aharvey@php.net</email>
+  <active>yes</active>
+ </lead>
+ <developer>
+  <name>Stig Bakken</name>
+  <user>ssb</user>
+  <email>stig@php.net</email>
+  <active>yes</active>
+ </developer>
+ <developer>
+  <name>Tomas V.V.Cox</name>
+  <user>cox</user>
+  <email>cox@idecnet.com</email>
+  <active>yes</active>
+ </developer>
+ <date>2010-01-29</date>
+ <time>09:01:27</time>
+ <version>
+  <release>1.7.13</release>
+  <api>1.7.13</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license uri="http://www.php.net/license">PHP License</license>
+ <notes>This release of DB fixes a number of minor issues reported since the release of DB 1.7.12.
+
+All drivers:
+* Replaced instances of '=&amp; new Foo' with '= new Foo' to make DB (slightly) more E_STRICT friendly.  Request 11581.
+
+mysql:
+* Added an explicit call to select the database to fix calls to tableInfo() without a preceding query.  Bug 11580.
+
+mysqli:
+* Added an explicit call to select the database to fix calls to tableInfo() without a preceding query.  Bug 11580.
+
+sqlite:
+* Altered fetchInto() to remove extraneous quotes returned by SQLite.  Bug 11716.</notes>
+ <contents>
+  <dir name="/">
+   <file md5sum="00fc796571e167a2bd17f6691a2ddffe" name="tests/transactions.inc" role="test"/>
+   <file md5sum="13b1c3a21e4d9f24fe1b33d306ad8fe0" name="tests/skipif.inc" role="test"/>
+   <file md5sum="312e6618fa82a872c9e65d998da9561e" name="tests/simplequery.inc" role="test"/>
+   <file md5sum="b30a53c29b829a3932c5e8479bd2deb4" name="tests/sequences.inc" role="test"/>
+   <file md5sum="aac444f47ed3ad1642013539d99f5757" name="tests/run.cvs" role="test"/>
+   <file md5sum="de177b83e1681d1d08e0c92aec168cd9" name="tests/prepexe.inc" role="test"/>
+   <file md5sum="9967a99a3c500d771b8c15faa86ad416" name="tests/numrows.inc" role="test"/>
+   <file md5sum="10c25427ebeca0daf1fb7ed33fdc2682" name="tests/numcols.inc" role="test"/>
+   <file md5sum="4cd93255482abcf60d9deaf7888760aa" name="tests/limit.inc" role="test"/>
+   <file md5sum="2a932aca6e775e98689b689ae54d2b50" name="tests/include.inc" role="test">
+    <tasks:replace from="@include_path@" to="php_dir" type="pear-config"/>
+   </file>
+   <file md5sum="7cb25802942e04e59001e85663a7ab0e" name="tests/fetchmode_object.inc" role="test"/>
+   <file md5sum="2cb4b6b013652415d29a2b71417cef18" name="tests/fetchmodes.inc" role="test"/>
+   <file md5sum="086b838cc170101e636af2e3b73b46b8" name="tests/errors.inc" role="test"/>
+   <file md5sum="3016dba4918a322d440dbb688bce024a" name="tests/driver/skipif.inc" role="test"/>
+   <file md5sum="18a9d3f6895859bb74e9d380c600d4cd" name="tests/driver/setup.inc.cvs" role="test">
+    <tasks:replace from="@include_path@" to="php_dir" type="pear-config"/>
+   </file>
+   <file md5sum="7023d979e8bcb94a93d48597d864feb3" name="tests/driver/run.cvs" role="test"/>
+   <file md5sum="8dc5f2d2be9b916e9940825f4511b533" name="tests/driver/multiconnect.php" role="test"/>
+   <file md5sum="b1d4a722f5c583a77bba51d4e9749ab2" name="tests/driver/mktable.inc" role="test"/>
+   <file md5sum="c3933292049fa189b319daa0c1f008c9" name="tests/driver/droptable.inc" role="test"/>
+   <file md5sum="68c43e8c27b78bc7c731a89958882301" name="tests/driver/connect.inc" role="test"/>
+   <file md5sum="281055f0d5ab507718a2c7501edb3a18" name="tests/driver/21freeResult.phpt" role="test"/>
+   <file md5sum="4655d272211dc5d60904796d6d7e1f99" name="tests/driver/20locale.phpt" role="test"/>
+   <file md5sum="de354d5fe32f0b9fbbcaed1bada7e7a2" name="tests/driver/19getlistof.phpt" role="test"/>
+   <file md5sum="096f764b8519e18c0ad2eeaef6229ee1" name="tests/driver/18get.phpt" role="test"/>
+   <file md5sum="816de230b3ff9b0fdf57bf8a1a7700cf" name="tests/driver/17query.phpt" role="test"/>
+   <file md5sum="50b6ad0cbea649854ea4e09e524d2641" name="tests/driver/16tableinfo.phpt" role="test"/>
+   <file md5sum="2cf853766a1c1dc21f0b38988cd5a406" name="tests/driver/15quote.phpt" role="test"/>
+   <file md5sum="3ca3ee12cfe59a146caa21e65c4b32e1" name="tests/driver/14fetchmode_object.phpt" role="test"/>
+   <file md5sum="b440536baa35dcd7f40f41f26a0ba184" name="tests/driver/13limit.phpt" role="test"/>
+   <file md5sum="1ad007b069ba4ee8af4e0faa2d1d38e9" name="tests/driver/11transactions.phpt" role="test"/>
+   <file md5sum="b2e481fc6f310db41e249a1e53f353c2" name="tests/driver/10errormap.phpt" role="test"/>
+   <file md5sum="7efee695096e0cf6e243e5590915b6fc" name="tests/driver/09numrows.phpt" role="test"/>
+   <file md5sum="b2e5ebe28916e63d8502845d58f74d49" name="tests/driver/08affectedrows.phpt" role="test"/>
+   <file md5sum="8d651d2da580619ed5abeaaa9e1f71ad" name="tests/driver/06prepexec.phpt" role="test"/>
+   <file md5sum="1b52edb34978a8929f4315b7ec2f5445" name="tests/driver/05sequences.phpt" role="test"/>
+   <file md5sum="a5ecf473f648022af5dc9fbb2f33e371" name="tests/driver/04numcols.phpt" role="test"/>
+   <file md5sum="b671efeac9fd34b83309de8413531317" name="tests/driver/03simplequery.phpt" role="test"/>
+   <file md5sum="06b9bb0bec3cbfbd2e463d2782d5f05a" name="tests/driver/02fetch.phpt" role="test"/>
+   <file md5sum="81f3cb01442148ff75a752f68b946df0" name="tests/driver/01connect.phpt" role="test"/>
+   <file md5sum="a470ea13cb74d88619f08b1308054975" name="tests/db_parsedsn.phpt" role="test"/>
+   <file md5sum="da74e7939fe22d9c526939e978ace61c" name="tests/db_ismanip.phpt" role="test"/>
+   <file md5sum="79e88e6db0c25ca1ee5e2aac35a24d6c" name="tests/db_factory.phpt" role="test"/>
+   <file md5sum="5f5068a8a1a3742ff0810be61b57288d" name="tests/db_error2.phpt" role="test"/>
+   <file md5sum="2e7f987503b8b5e2a7fc4c3c30e79c13" name="tests/db_error.phpt" role="test"/>
+   <file md5sum="31f276d6ff710a1f048c50cd533ffe5c" name="doc/TESTERS" role="doc"/>
+   <file md5sum="30bc4ceeccd51413ab81fa98c1fb9aa8" name="doc/STATUS" role="doc"/>
+   <file md5sum="8c5779871e07720a032615177403b691" name="doc/MAINTAINERS" role="doc"/>
+   <file md5sum="651a644b6f3495fc39279d75b8099372" name="doc/IDEAS" role="doc"/>
+   <file md5sum="4fc3ffb31c807f7b92d7b3c00535e883" name="DB/sybase.php" role="php">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file md5sum="bb7f96b3f78bbd481b31127bab61537a" name="DB/storage.php" role="php">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file md5sum="4ec65c56336e956b953b22f48c48b796" name="DB/sqlite.php" role="php">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file md5sum="347ce374b54195a000ec4b268dc656a9" name="DB/pgsql.php" role="php">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file md5sum="fcee078e70107d665ba624b1ce7a7ef4" name="DB/odbc.php" role="php">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file md5sum="39189815c39dc0167a451654ead3c99b" name="DB/oci8.php" role="php">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file md5sum="177df43a04dbb4cc3840fb02e4ccf0bb" name="DB/mysqli.php" role="php">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file md5sum="57bc68e9050730676272e33dbec065e7" name="DB/mysql.php" role="php">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file md5sum="f30b7dfbf00343edb6de00624595b102" name="DB/mssql.php" role="php">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file md5sum="7a1ad0f98c396944f449649dad6662d5" name="DB/msql.php" role="php">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file md5sum="c87ed59a6cd174706980d42a6f359ade" name="DB/ifx.php" role="php">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file md5sum="a06866d7621a2077a091741c3d3d026e" name="DB/ibase.php" role="php">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file md5sum="3683c44821ef40a97b82dbe0ead9d9e5" name="DB/fbsql.php" role="php">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file md5sum="9f1e6803eb8d056d0d9c5dbd62a535c9" name="DB/dbase.php" role="php">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file md5sum="79bf960987c22987845f8b4fa3aa8716" name="DB/common.php" role="php">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file baseinstalldir="/" md5sum="38ae3509ec733b5a7a6a41a585f991d1" name="DB.php" role="php">
+    <tasks:replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>4.2.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0b1</min>
+   </pearinstaller>
+   <package>
+    <name>PEAR</name>
+    <channel>pear.php.net</channel>
+    <min>1.0b1</min>
+   </package>
+  </required>
+ </dependencies>
+ <phprelease/>
+</package>

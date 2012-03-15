@@ -1,0 +1,22 @@
+<?php
+class UNL_TourMap_BuildingImage
+{
+    public $code;
+
+    public $size = 'md';
+
+    function __construct($options = array())
+    {
+        Savvy_ClassToTemplateMapper::$output_template['UNL_TourMap'] = 'UNL/TourMap-partial';
+        if (!isset($options['code'])) {
+            throw new Exception('No building to show info for!', 403);
+        }
+        $bldgs = new UNL_Common_Building();
+        if (!$bldgs->buildingExists($options['code'])) {
+            throw new UNL_TourMap_BuildingImage_Missing('Sorry, that building doesn\'t exist!', 404);
+        }
+
+        $this->code = $options['code'];
+
+    }
+}
