@@ -13,40 +13,26 @@ class UNL_OpenMap_GoogleMap
      *
      * @var int
      */
-    public $zoom = 16;
+    public $zoom = 15;
 
     /**
      * The min zoom level a user is allowed to see
      *
      * @var int
      */
-    public $mapMinZoom = 0;
+    public $mapMinZoom = 12;
 
     /**
      * The max zoom level a user is allowed to see
      *
      * @var int
      */
-    public $mapMaxZoom = 20;
+    public $mapMaxZoom = 19;
 
     /**
-     * The type of map to render.
-     *
-     * @var string ROADMAP|SATELLITE|HYBRID|TERRAIN
+     * The point to display
      */
-    public $type;
-
-    const MAPTYPE_ROADMAP   = 'roadmap';
-    const MAPTYPE_SATELLITE = 'satellite';
-    const MAPTYPE_HYBRID    = 'hybrid';
-    const MAPTYPE_TERRAIN   = 'terrain';
-
-    /**
-     * All the points displayed on this map
-     *
-     * @var Iterator
-     */
-    public $markers;
+    public $marker;
 
     public $options = array();
 
@@ -63,17 +49,15 @@ class UNL_OpenMap_GoogleMap
         if (isset($options['zoom'])) {
             $this->zoom = $options['zoom'];
         }
+
+        if (isset($options['marker'])) {
+            $this->marker = $options['marker'];
+        }
     }
 
     public function setCenter(UNL_OpenMap_LatLng $center)
     {
         $this->center = $center;
-        return $this;
-    }
-
-    public function setMarkers(Iterator $markers)
-    {
-        $this->markers = $markers;
         return $this;
     }
 }

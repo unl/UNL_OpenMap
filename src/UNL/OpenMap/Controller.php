@@ -2,14 +2,11 @@
 class UNL_OpenMap_Controller
 {
     public $options = array('format' => 'html',
-                            'view'   => 'city',
+                            'view'   => 'map',
                             'mobile' => false,
-                            'markers'=> array('buildings'));
+                            'marker'=> array('building'));
 
-    public $view_map = array('lincoln'             => 'UNL_OpenMap_GoogleMap_Lincoln',
-                             'city'                => 'UNL_OpenMap_GoogleMap_City',
-                             'east'                => 'UNL_OpenMap_GoogleMap_East',
-                             'innovation'          => 'UNL_OpenMap_GoogleMap_Innovation',
+    public $view_map = array('map'             => 'UNL_OpenMap_GoogleMap',
 
                              /* MARKER LISTS (These views replaced with $this->options['markers'] set in the router)
                              'campuses'            => 'UNL_OpenMap_MarkerList_Campuses',
@@ -32,7 +29,6 @@ class UNL_OpenMap_Controller
                              'citybuildings'       => 'UNL_Common_Building_City',
                              'eastbuildings'       => 'UNL_Common_Building_East',
                              'lincolnbuildings'    => 'UNL_Common_Building_Lincoln',
-                             //'building'            => 'UNL_OpenMap_GoogleMap_DynamicCenter',
                              'sculptureinfo'       => 'UNL_Common_Artists',
 
                              'building'            => 'UNL_OpenMap_Marker_Building',

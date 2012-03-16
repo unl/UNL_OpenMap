@@ -73,8 +73,8 @@
                 <!--THIS IS THE MAIN CONTENT AREA; WDN: see glossary item 'main content area' -->
                 <!-- TemplateBeginEditable name="maincontentarea" -->
 
-                <?php var_dump($context); ?>
-                <?php echo $savvy->render($context); ?>
+                <?php var_dump($context->output); ?>
+                <?php echo $savvy->render($context->output); ?>
 
 
                 <!-- TemplateEndEditable -->

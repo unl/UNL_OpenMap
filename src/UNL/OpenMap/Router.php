@@ -24,9 +24,10 @@ class UNL_OpenMap_Router
 
         switch(true) {
             // Campus specific prefix
-            case preg_match('/^(east|city|innovation)\/(.*)$/', $requestURI, $matches):
-                $options['view'] = $matches[1];
-                $options = self::determineView($matches[2]) + $options;
+            case preg_match('/^campus\/(east|city|innovation)$/', $requestURI, $matches):
+                $options['view'] = 'map';
+                $options['feature'] = 'building';
+                $options['marker'] = $matches[1];
                 break;
 
             //Show specific map markers/features on map init.
