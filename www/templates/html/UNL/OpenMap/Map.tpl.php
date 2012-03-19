@@ -6,11 +6,6 @@
 
 <script src="<?php echo UNL_OpenMap_Controller::getURL(); ?>leaflet/leaflet.js"></script>
 
-<script src="<?php echo UNL_OpenMap_Controller::getURL(); ?>buildings?format=json"></script>
-
-<!--
-<script src="<?php echo UNL_OpenMap_Controller::getURL().$context->feature.'/'.$context->marker;?>?format=json"></script>
--->
 
 
 <?php
@@ -36,19 +31,68 @@ if (isset($context->options['format'])
 
 
 <script type="text/javascript">
+var setMap = function() {
+    WDN.log('set the map');
+    if (map.getZoom() < 15) {
+        showCampuses();
+    } else {
+        showBuildings();
+    }
+};
+
+var showBuildings = function() {
+    WDN.jQuery(document).ready(function($) {
+        $.getJSON('<?php echo UNL_OpenMap_Controller::getURL(); ?>buildings?format=json', function(data) {
+            var items = [];
+
+            $.each(data, function(key, val) {
+                if (val.position.polygon.length > 0) {
+                    items[val.code] = [];
+                    $.each(val.position.polygon, function(key1, latlon) {
+                        items[val.code].push(new L.LatLng(latlon.latitude, latlon.longitude));
+                    });
+                }
+            });
+
+            var keys = [];
+            for (var key in items) {
+                keys.push(key);
+            }
+
+            var buildings = [];
+            $.each(keys, function(key, code) {
+                polygon = new L.Polygon(items[code]);
+                map.addLayer(polygon);
+                buildings.push(polygon);
+            });
+        });
+    });
+};
+
+var showCampuses = function() {
+
+};
+
+
+
 // initialize the map on the "map" div
 var map = new L.Map('map');
 
 // create a CloudMade tile layer (or use other provider of your choice)
 var unlOSM = new L.TileLayer('<?php echo UNL_OpenMap_Controller::getURL(); ?>images/tiles/open-streets-lnk/{z}/{x}/{y}.png', {
-    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
-    maxZoom: 18,
-    minZoom: 12,
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+    maxZoom: <?php echo $context->mapMaxZoom; ?>,
+    minZoom: <?php echo $context->mapMinZoom; ?>,
     scheme: 'tms'
 });
 
-// add the CloudMade layer to the map set the view to a given center and zoom
-map.setView(new L.LatLng(40.827839, -96.685524), 14).addLayer(unlOSM);
+map.on('load', setMap);
+map.on('zoomend', setMap);
+
+// add the layer to the map set the view to a given center and zoom
+map.setView(new L.LatLng(40.827839, -96.685524), <?php echo $context->zoom; ?>).addLayer(unlOSM);
+
+
 
 
 
