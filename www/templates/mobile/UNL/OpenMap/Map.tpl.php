@@ -32,7 +32,7 @@ $(window).load(function(e) {
     }
 
 
-<?php if ($context->getRawObject() instanceof UNL_OpenMap_GoogleMap_DynamicCenter) : ?>
+<?php if ($context->getRawObject() instanceof UNL_OpenMap_Map_DynamicCenter) : ?>
     UNLTourMap.openBuildingInfo("<?php echo $context->options['code']; ?>");
 <?php endif; ?>
 

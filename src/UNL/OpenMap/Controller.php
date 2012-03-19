@@ -6,9 +6,9 @@ class UNL_OpenMap_Controller
                             'mobile' => false,
                             'marker'=> array('building'));
 
-    public $view_map = array('map'             => 'UNL_OpenMap_GoogleMap',
+    public $view_map = array('map'             => 'UNL_OpenMap_Map',
 
-                             /* MARKER LISTS (These views replaced with $this->options['markers'] set in the router)
+
                              'campuses'            => 'UNL_OpenMap_MarkerList_Campuses',
                              'buildings'           => 'UNL_OpenMap_MarkerList_Buildings',
                              'citybuildingmarkers' => 'UNL_OpenMap_MarkerList_Buildings_CityCampus',
@@ -18,7 +18,7 @@ class UNL_OpenMap_Controller
                              'policestations'      => 'UNL_OpenMap_MarkerList_PoliceStations',
                              'sculptures'          => 'UNL_OpenMap_MarkerList_Sculptures',
                              'search'              => 'UNL_OpenMap_MarkerList_BuildingSearch',
-                             'filter'              => 'UNL_OpenMap_FilteredMarkerList', */
+                             'filter'              => 'UNL_OpenMap_FilteredMarkerList',
 
                              // Marker Lists used for backwards compatibility
                              'rss_all.xml'         => 'UNL_OpenMap_MarkerList_AllMarkers',
@@ -75,15 +75,11 @@ class UNL_OpenMap_Controller
     function run()
     {
         if (isset($this->options['nugget']) && $this->options['nugget'] == 'image') {
-            Savvy_ClassToTemplateMapper::$output_template['UNL_OpenMap'] = 'UNL/TourMap-partial';
+            Savvy_ClassToTemplateMapper::$output_template['UNL_OpenMap'] = 'UNL/OpenMap-partial';
         }
 
         try {
-            if (!isset($this->options['nugget'])
-                && isset($this->view_map[$this->options['view']])
-                && strpos($this->view_map[$this->options['view']], 'UNL_OpenMap_Marker_') !== false) {
-                $this->output = new UNL_OpenMap_GoogleMap_DynamicCenter($this->options);
-            } elseif (isset($this->view_map[$this->options['view']])) {
+            if (isset($this->view_map[$this->options['view']])) {
                 $this->output = new $this->view_map[$this->options['view']]($this->options);
             } else {
                 throw new Exception('Sorry, that view does not exist.', 404);

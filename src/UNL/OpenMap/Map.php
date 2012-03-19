@@ -1,5 +1,5 @@
 <?php
-class UNL_OpenMap_GoogleMap
+class UNL_OpenMap_Map
 {
     /**
      * Center point for this map

@@ -42,7 +42,7 @@ $page->maincontentarea .= '
                 <div id="pointlist">
                 <h3 class="sec_header">All Buildings</h3>
 ';
-$page->maincontentarea .= $outputcontroller->render(new UNL_OpenMap_MarkerList_Buildings(), 'UNL/TourMap/MarkerList.tpl.php');
+$page->maincontentarea .= $outputcontroller->render(new UNL_OpenMap_MarkerList_Buildings(), 'UNL/OpenMap/MarkerList.tpl.php');
 $page->maincontentarea .= '</div>
             </div>';
 if (isset($_GET['mc'])) {
