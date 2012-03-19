@@ -10,7 +10,14 @@
             },
         "polygon":
             {
-            "coordinates":[0,0]
+            <?php $last_key = end(array_keys($context->polygon->coords));
+            foreach ($context->polygon->coords as $key => $coords): ?>
+                {
+                    "latitude":"<?php echo $coords->lat; ?>",
+                    "longitude":"<?php echo $coords->lng; ?>"
+                }<?php echo ($key == $last_key ? '' : ',');?>
+
+            <?php endforeach; ?>
             }
     }
 }

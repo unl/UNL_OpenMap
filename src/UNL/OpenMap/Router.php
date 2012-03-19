@@ -32,7 +32,7 @@ class UNL_OpenMap_Router
 
             //Show specific map markers/features on map init.
             case preg_match('/^((buildings|bikeracks|policestations|emergencyphones|sculptures|campuses)\|?)+$/', $requestURI, $matches):
-                $options['markers'] = explode('|', $matches[0]);
+                $options['view'] = $matches[0];
                 break;
 
             // Support for older building links, eg: maps.unl.edu/501
