@@ -9,7 +9,7 @@
             "longitude":"<?php echo $context->position->lng; ?>"
             },
         "polygon":
-            {
+            [
             <?php $last_key = end(array_keys($context->polygon->coords));
             foreach ($context->polygon->coords as $key => $coords): ?>
                 {
@@ -18,6 +18,6 @@
                 }<?php echo ($key == $last_key ? '' : ',');?>
 
             <?php endforeach; ?>
-            }
+            ]
     }
 }
