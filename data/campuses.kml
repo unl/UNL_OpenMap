@@ -29,6 +29,11 @@
     <name>City Campus</name>
     <description><![CDATA[]]></description>
     <styleUrl>#style2</styleUrl>
+    <Point>
+      <coordinates>
+        -96.701513,40.817719,0.000000
+      </coordinates>
+    </Point>
     <Polygon>
       <outerBoundaryIs>
         <LinearRing>
@@ -106,6 +111,11 @@
     <name>East Campus</name>
     <description><![CDATA[]]></description>
     <styleUrl>#style1</styleUrl>
+    <Point>
+      <coordinates>
+        -96.664622,40.839018,0.000000
+      </coordinates>
+    </Point>
     <Polygon>
       <outerBoundaryIs>
         <LinearRing>
