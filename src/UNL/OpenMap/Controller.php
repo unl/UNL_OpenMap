@@ -3,8 +3,7 @@ class UNL_OpenMap_Controller
 {
     public $options = array('format' => 'html',
                             'view'   => 'map',
-                            'mobile' => false,
-                            'marker'=> array('building'));
+                            'mobile' => false);
 
     public $view_map = array('map'             => 'UNL_OpenMap_Map',
 

@@ -13,26 +13,21 @@ class UNL_OpenMap_Map
      *
      * @var int
      */
-    public $zoom = 15;
+    public $zoom = 14;
 
     /**
      * The min zoom level a user is allowed to see
      *
      * @var int
      */
-    public $mapMinZoom = 12;
+    public $mapMinZoom = 13;
 
     /**
      * The max zoom level a user is allowed to see
      *
      * @var int
      */
-    public $mapMaxZoom = 19;
-
-    /**
-     * The point to display
-     */
-    public $marker;
+    public $mapMaxZoom = 17;
 
     public $options = array();
 
@@ -48,10 +43,6 @@ class UNL_OpenMap_Map
 
         if (isset($options['zoom'])) {
             $this->zoom = $options['zoom'];
-        }
-
-        if (isset($options['marker'])) {
-            $this->marker = $options['marker'];
         }
     }
 

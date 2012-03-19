@@ -27,7 +27,6 @@ class UNL_OpenMap_Router
             case preg_match('/^campus\/(east|city|innovation)$/', $requestURI, $matches):
                 $options['view'] = 'map';
                 $options['feature'] = 'building';
-                $options['marker'] = $matches[1];
                 break;
 
             //Show specific map markers/features on map init.
