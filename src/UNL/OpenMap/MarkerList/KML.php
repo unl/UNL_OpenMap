@@ -18,28 +18,29 @@ class UNL_OpenMap_MarkerList_KML extends ArrayIterator implements UNL_OpenMap_Ma
 
         foreach ($this->xml->Document->Placemark as $placemark) {
             if (isset($placemark->Point) || isset($placemark->Polygon)) {
+                if (!array_key_exists((string)$placemark->name, $info)) {
+                    $info[(string)$placemark->name]['code'] = count($info);
+                    $info[(string)$placemark->name]['title'] = (string)$placemark->name;
+                }
                 if (isset($placemark->Point)) {
                     $geo = $placemark->Point->coordinates;
                     $geo = explode(',', trim((string)$geo));
+                    $info[(string)$placemark->name]['lat'] = $geo[1];
+                    $info[(string)$placemark->name]['lng'] = $geo[0];
                 }
                 if (isset($placemark->Polygon)) {
-                    $poly = $placemark->Polygon->outerBoundaryIs->LinearRing->coordinates;
-                    preg_match_all("/[\s]+(?P<lon>\S+),(?P<lat>\S+),0.0*[\s]+/", $poly, $matches);
+                    $coords = array();
+                    $poly = $placemark->Polygon->outerBoundaryIs->LinearRing->coordinates;//var_dump($poly);
+                    preg_match_all("/[\s]*(?P<lon>\S+),(?P<lat>\S+),0.0*[\s]*/", $poly, $matches);
                     foreach ($matches[0] as $key => $match) {
                         $coords[$key]['lat'] = $matches['lat'][$key];
                         $coords[$key]['lon'] = $matches['lon'][$key];
                     }
+                    $info[(string)$placemark->name]['coords'] = $coords;
                 }
             } else {
                 throw new Exception('Do not know how to work with supplied KML file',404);
             }
-
-            $info[] = array(
-                        'lat' => $geo[1],
-                        'lng' => $geo[0],
-                        'coords' => (isset($coords) ? $coords : array()),
-                        'title' => $placemark->name,
-                        'code' => count($info));
         }
 
         parent::__construct($info);
@@ -47,8 +48,6 @@ class UNL_OpenMap_MarkerList_KML extends ArrayIterator implements UNL_OpenMap_Ma
 
     function current()
     {
-        $code = $this->key();
-
         $data = parent::current();
 
         $position = new UNL_OpenMap_LatLng(array('lat' => $data['lat'], 'lng' => $data['lng']));
@@ -59,6 +58,6 @@ class UNL_OpenMap_MarkerList_KML extends ArrayIterator implements UNL_OpenMap_Ma
                                         'position' => $position,
                                         'polygon' => $polygon,
                                         'title' => $data['title'],
-                                        'code' => $code));
+                                        'code' => $data['code']));
     }
 }

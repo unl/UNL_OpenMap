@@ -3,7 +3,7 @@
 <Document>
   <name>UNL Campuses</name>
   <description><![CDATA[The campus boundaries of the University of Nebraska-Lincoln.]]></description>
-  <Style id="style2">
+  <Style id="style4">
     <LineStyle>
       <color>40000000</color>
       <width>3</width>
@@ -14,7 +14,7 @@
       <outline>1</outline>
     </PolyStyle>
   </Style>
-  <Style id="style1">
+  <Style id="style2">
     <LineStyle>
       <color>40000000</color>
       <width>3</width>
@@ -25,15 +25,24 @@
       <outline>1</outline>
     </PolyStyle>
   </Style>
+  <Style id="style1">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/red-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style3">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/red-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
   <Placemark>
     <name>City Campus</name>
     <description><![CDATA[]]></description>
-    <styleUrl>#style2</styleUrl>
-    <Point>
-      <coordinates>
-        -96.701513,40.817719,0.000000
-      </coordinates>
-    </Point>
+    <styleUrl>#style4</styleUrl>
     <Polygon>
       <outerBoundaryIs>
         <LinearRing>
@@ -110,12 +119,7 @@
   <Placemark>
     <name>East Campus</name>
     <description><![CDATA[]]></description>
-    <styleUrl>#style1</styleUrl>
-    <Point>
-      <coordinates>
-        -96.664622,40.839018,0.000000
-      </coordinates>
-    </Point>
+    <styleUrl>#style2</styleUrl>
     <Polygon>
       <outerBoundaryIs>
         <LinearRing>
@@ -135,6 +139,22 @@
         </LinearRing>
       </outerBoundaryIs>
     </Polygon>
+  </Placemark>
+  <Placemark>
+    <name>City Campus</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style1</styleUrl>
+    <Point>
+      <coordinates>-96.701637,40.817642,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>East Campus</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style3</styleUrl>
+    <Point>
+      <coordinates>-96.667595,40.830265,0.000000</coordinates>
+    </Point>
   </Placemark>
 </Document>
 </kml>
