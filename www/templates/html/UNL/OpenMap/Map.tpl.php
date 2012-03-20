@@ -31,18 +31,33 @@ if (isset($context->options['format'])
 
 
 <script type="text/javascript">
+var $ = WDN.jQuery;
+var displayedFeatures = [];
+var campuses, buildings;
+
 var setMap = function() {
     WDN.log('set the map');
-    if (map.getZoom() < 15) {
-        showCampuses();
-    } else {
-        showBuildings();
-    }
+
+    $(document).ready(function() {
+        if (map.getZoom() < 15) {
+            showCampuses();
+        } else {
+            showBuildings();
+        }
+    });
 };
 
-var showBuildings = function() {
-    WDN.jQuery(document).ready(function($) {
-        $.getJSON('<?php echo UNL_OpenMap_Controller::getURL(); ?>buildings?format=json', function(data) {
+var showCampuses = function() {
+    if (displayedFeatures.indexOf('buildings') > -1) {
+        WDN.log('remove buildings');
+        $.each(buildings, function(key, loc) {
+            map.removeLayer(loc);
+        });
+        displayedFeatures.pop('buildings');
+    }
+    if (typeof campuses == 'undefined') {
+        $.getJSON('<?php echo UNL_OpenMap_Controller::getURL(); ?>campuses?format=json', function(data) {
+            WDN.log('JSON returned campuses');
             var items = [];
 
             $.each(data, function(key, val) {
@@ -59,19 +74,68 @@ var showBuildings = function() {
                 keys.push(key);
             }
 
-            var buildings = [];
+            campuses = [];
+            $.each(keys, function(key, code) {
+                polygon = new L.Polygon(items[code]);
+                map.addLayer(polygon);
+                campuses.push(polygon);
+            });
+            displayedFeatures.push('campuses');
+        });
+    } else if (displayedFeatures.indexOf('campuses') < 0) {
+        WDN.log('campuses already loaded, add them');
+        $.each(campuses, function(key, loc) {
+            map.addLayer(loc);
+        });
+        displayedFeatures.push('campuses');
+    }
+
+};
+
+var showBuildings = function() {
+    if (displayedFeatures.indexOf('campuses') > -1) {
+        WDN.log('remove campuses');
+        $.each(campuses, function(key, loc) {
+            map.removeLayer(loc);
+        });
+        displayedFeatures.pop('campuses');
+    }
+    if (typeof buildings == 'undefined') {
+        $.getJSON('<?php echo UNL_OpenMap_Controller::getURL(); ?>buildings?format=json', function(data) {
+            WDN.log('JSON returned buildings');
+            var items = [];
+
+            $.each(data, function(key, val) {
+                if (val.position.polygon.length > 0) {
+                    items[val.code] = [];
+                    $.each(val.position.polygon, function(key1, latlon) {
+                        items[val.code].push(new L.LatLng(latlon.latitude, latlon.longitude));
+                    });
+                }
+            });
+
+            var keys = [];
+            for (var key in items) {
+                keys.push(key);
+            }
+
+            buildings = [];
             $.each(keys, function(key, code) {
                 polygon = new L.Polygon(items[code]);
                 map.addLayer(polygon);
                 buildings.push(polygon);
             });
+            displayedFeatures.push('buildings');
         });
-    });
+    } else if (displayedFeatures.indexOf('buildings') < 0) {
+        WDN.log('buildings already loaded, add them');
+        $.each(buildings, function(key, loc) {
+            map.addLayer(loc);
+        });
+        displayedFeatures.push('buildings');
+    }
 };
 
-var showCampuses = function() {
-
-};
 
 
 
@@ -86,7 +150,7 @@ var unlOSM = new L.TileLayer('<?php echo UNL_OpenMap_Controller::getURL(); ?>ima
     scheme: 'tms'
 });
 
-map.on('load', setMap);
+// zoomend is also triggered on load
 map.on('zoomend', setMap);
 
 // add the layer to the map set the view to a given center and zoom
@@ -128,7 +192,7 @@ var polygonPoints =
 var polygon = new L.Polygon(polygonPoints);
 polygon.bindPopup("I am a polygon.");
 polygon.on('click', onMapClick);
-map.addLayer(polygon);
+//map.addLayer(polygon);
 
 
 //create a marker in the given location and add it to the map
