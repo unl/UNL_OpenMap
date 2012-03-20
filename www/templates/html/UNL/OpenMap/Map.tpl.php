@@ -33,31 +33,38 @@ if (isset($context->options['format'])
 <script type="text/javascript">
 var $ = WDN.jQuery;
 var displayedFeatures = [];
-var campuses, buildings;
+//cache of leaflet polygons
+var features = [];
 
 var setMap = function() {
     WDN.log('set the map');
 
     $(document).ready(function() {
         if (map.getZoom() < 15) {
-            showCampuses();
+            removeFeature('buildings');
+            addFeature('campuses');
         } else {
-            showBuildings();
+            removeFeature('campuses');
+            addFeature('buildings');
         }
     });
 };
 
-var showCampuses = function() {
-    if (displayedFeatures.indexOf('buildings') > -1) {
-        WDN.log('remove buildings');
-        $.each(buildings, function(key, loc) {
+var removeFeature = function(feature) {
+    if (displayedFeatures.indexOf(feature) > -1) {
+        WDN.log('remove '+feature);
+        $.each(features[feature], function(key, loc) {
             map.removeLayer(loc);
         });
-        displayedFeatures.pop('buildings');
+        displayedFeatures.pop(feature);
     }
-    if (typeof campuses == 'undefined') {
-        $.getJSON('<?php echo UNL_OpenMap_Controller::getURL(); ?>campuses?format=json', function(data) {
-            WDN.log('JSON returned campuses');
+};
+
+var addFeature = function(feature) {
+    if (typeof features[feature] == 'undefined') {
+        var url = '<?php echo UNL_OpenMap_Controller::getURL(); ?>'+feature+'?format=json';
+        $.getJSON(url, function(data) {
+            WDN.log('JSON returned for '+feature);
             var items = [];
 
             $.each(data, function(key, val) {
@@ -74,67 +81,25 @@ var showCampuses = function() {
                 keys.push(key);
             }
 
-            campuses = [];
+            features[feature] = [];
             $.each(keys, function(key, code) {
                 polygon = new L.Polygon(items[code]);
                 map.addLayer(polygon);
-                campuses.push(polygon);
+                features[feature].push(polygon);
             });
-            displayedFeatures.push('campuses');
+            displayedFeatures.push(feature);
         });
-    } else if (displayedFeatures.indexOf('campuses') < 0) {
-        WDN.log('campuses already loaded, add them');
-        $.each(campuses, function(key, loc) {
+    } else if (displayedFeatures.indexOf(feature) < 0) {
+        WDN.log(feature+' already loaded, add items from features["'+feature+'"] cache');
+        $.each(features[feature], function(key, loc) {
             map.addLayer(loc);
         });
-        displayedFeatures.push('campuses');
-    }
-
-};
-
-var showBuildings = function() {
-    if (displayedFeatures.indexOf('campuses') > -1) {
-        WDN.log('remove campuses');
-        $.each(campuses, function(key, loc) {
-            map.removeLayer(loc);
-        });
-        displayedFeatures.pop('campuses');
-    }
-    if (typeof buildings == 'undefined') {
-        $.getJSON('<?php echo UNL_OpenMap_Controller::getURL(); ?>buildings?format=json', function(data) {
-            WDN.log('JSON returned buildings');
-            var items = [];
-
-            $.each(data, function(key, val) {
-                if (val.position.polygon.length > 0) {
-                    items[val.code] = [];
-                    $.each(val.position.polygon, function(key1, latlon) {
-                        items[val.code].push(new L.LatLng(latlon.latitude, latlon.longitude));
-                    });
-                }
-            });
-
-            var keys = [];
-            for (var key in items) {
-                keys.push(key);
-            }
-
-            buildings = [];
-            $.each(keys, function(key, code) {
-                polygon = new L.Polygon(items[code]);
-                map.addLayer(polygon);
-                buildings.push(polygon);
-            });
-            displayedFeatures.push('buildings');
-        });
-    } else if (displayedFeatures.indexOf('buildings') < 0) {
-        WDN.log('buildings already loaded, add them');
-        $.each(buildings, function(key, loc) {
-            map.addLayer(loc);
-        });
-        displayedFeatures.push('buildings');
+        displayedFeatures.push(feature);
     }
 };
+
+
+
 
 
 
