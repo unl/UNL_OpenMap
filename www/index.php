@@ -22,7 +22,7 @@ if ($controller->options['format'] == 'html') {
         case 'partial':
             $outputcontroller->setEscape('htmlentities');
         case 'json':
-            //header('Content-Type:application/json');
+            header('Content-Type:application/json');
             break;
         case 'mobile':
             $outputcontroller->setEscape('htmlentities');

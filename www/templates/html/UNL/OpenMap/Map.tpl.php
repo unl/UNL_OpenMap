@@ -62,9 +62,10 @@ var removeFeature = function(feature) {
 
 var addFeature = function(feature) {
     if (typeof features[feature] == 'undefined') {
+        WDN.log(feature+' being loaded for the first time. JSON being requested...');
         var url = '<?php echo UNL_OpenMap_Controller::getURL(); ?>'+feature+'?format=json';
         $.getJSON(url, function(data) {
-            WDN.log('JSON returned for '+feature);
+            WDN.log('...JSON returned for '+feature);
             var items = [];
 
             $.each(data, function(key, val) {
