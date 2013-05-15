@@ -2,7 +2,7 @@
 **********************************
 Using maptiler.org
 
-For Mac OS X 10.6:
+For Mac OS X 10.6+:
     From /path/to/workspace/UNL_OpenMap/map_source or http://code.google.com/p/maptiler/ get and run:
         1. http://www.kyngchaos.com/files/software/unixport/GDAL_Complete-1.7.dmg (nothing to do after installation)
         2. http://maptiler.googlecode.com/issues/attachment?aid=1641967504875078876&name=maptiler-1.0-beta2fix3-macosx.zip&token=11bf9597dafa626a65cd4afa3ef5d736
