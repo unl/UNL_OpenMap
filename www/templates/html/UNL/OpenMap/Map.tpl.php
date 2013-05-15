@@ -40,7 +40,6 @@ var features = [];
 var setMap = function() {
     console.log('set the map');
 
-
     $(document).ready(function() {
         if (map.getZoom() < 15) {
             removeFeature('buildings');
