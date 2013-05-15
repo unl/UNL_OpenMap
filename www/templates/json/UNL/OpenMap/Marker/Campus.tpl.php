@@ -9,7 +9,9 @@
             },
         "polygon":
             [
-            <?php $last_key = end(array_keys($context->polygon->coords));
+            <?php
+            $keys = array_keys($context->polygon->coords);
+            $last_key = end($coords);
             foreach ($context->polygon->coords as $key => $coords): ?>
                 {
                     "latitude":"<?php echo $coords->lat; ?>",
