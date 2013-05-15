@@ -31,13 +31,15 @@ if (isset($context->options['format'])
 
 
 <script type="text/javascript">
-var $ = WDN.jQuery;
+
+
 var displayedFeatures = [];
 //cache of leaflet polygons
 var features = [];
 
 var setMap = function() {
-    WDN.log('set the map');
+    console.log('set the map');
+
 
     $(document).ready(function() {
         if (map.getZoom() < 15) {
@@ -52,7 +54,7 @@ var setMap = function() {
 
 var removeFeature = function(feature) {
     if (displayedFeatures.indexOf(feature) > -1) {
-        WDN.log('remove '+feature);
+        console.log('remove '+feature);
         $.each(features[feature], function(key, loc) {
             map.removeLayer(loc);
         });
@@ -62,10 +64,10 @@ var removeFeature = function(feature) {
 
 var addFeature = function(feature) {
     if (typeof features[feature] == 'undefined') {
-        WDN.log(feature+' being loaded for the first time. JSON being requested...');
+        console.log(feature+' being loaded for the first time. JSON being requested...');
         var url = '<?php echo UNL_OpenMap_Controller::getURL(); ?>'+feature+'?format=json';
         $.getJSON(url, function(data) {
-            WDN.log('...JSON returned for '+feature);
+            console.log('...JSON returned for '+feature);
             var items = [];
 
             $.each(data, function(key, val) {
@@ -91,7 +93,7 @@ var addFeature = function(feature) {
             displayedFeatures.push(feature);
         });
     } else if (displayedFeatures.indexOf(feature) < 0) {
-        WDN.log(feature+' already loaded, add items from features["'+feature+'"] cache');
+        console.log(feature+' already loaded, add items from features["'+feature+'"] cache');
         $.each(features[feature], function(key, loc) {
             map.addLayer(loc);
         });
@@ -181,5 +183,7 @@ function onMapClick(e) {
 	popup.setContent("You clicked the map at " + latlngStr);
 	map.openPopup(popup);
 }
+
+
 
 </script>
