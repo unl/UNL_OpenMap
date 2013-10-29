@@ -11,6 +11,7 @@ return array (
     'CYT' => 'C.Y. Thompson Library',
     'MILH' => 'Miller Hall',
     'BCH' => 'Biochemistry Hall',
+		'BDL' => 'Bio-Fiber Development Laboratory',
     'AB' => 'Activities Building',
     'KCR' => 'Kiesselbach Crops Research Laboratory',
     'ACB' => 'Agricultural Communications Building',
