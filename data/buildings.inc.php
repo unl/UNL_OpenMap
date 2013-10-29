@@ -30,6 +30,11 @@ return array (
     'name' => 'Biochemistry Hall',
     'location' => 'East Campus',
   ),
+	'BDL' => 
+  array (
+    'name' => 'Bio-Fiber Development Laboratory',
+    'location' => 'East Campus',
+  ),
   'AB' => 
   array (
     'name' => 'Activities Building',
